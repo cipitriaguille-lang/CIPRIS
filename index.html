@@ -142,17 +142,15 @@ nav.scrolled{
   margin-bottom:2.5rem;
 }
 .hero-title-line1{display:block;color:var(--w90)}
-.hero-title-line2{
-  display:block;color:var(--red);
-  position:relative;overflow:hidden;
-}
+.hero-title-line2{display:block;color:var(--red);position:relative}
 .hero-title-line2::after{
   content:'';
-  position:absolute;top:0;left:-100%;
-  width:60%;height:100%;
+  position:absolute;top:-10%;left:-100%;
+  width:60%;height:120%;
   background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%);
   animation:shine-sweep 4s ease-in-out infinite;
   pointer-events:none;
+  clip-path:inset(0);
 }
 @keyframes shine-sweep{
   0%,30%{left:-100%}
