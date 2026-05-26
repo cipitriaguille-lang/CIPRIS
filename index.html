@@ -1073,7 +1073,7 @@ document.querySelectorAll('a,button,.servicio-item,.step-item,.precio-card').for
     const canvas = document.getElementById('particles-canvas');
     const ctx = canvas.getContext('2d');
     let W,H,particles=[],mouse={x:-9999,y:-9999},lastMove=0,time=0;
-    const COUNT=90, CONNECT_DIST=150, MOUSE_DIST=130, MAX_SPD=2, RETURN_DELAY=2000;
+    const COUNT=200, CONNECT_DIST=150, MOUSE_DIST=130, MAX_SPD=2, RETURN_DELAY=2000;
 
     function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
     window.addEventListener('resize',resize); resize();
