@@ -181,6 +181,59 @@ nav.scrolled{
 .scroll-text{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--w30)}
 .scroll-bar{width:60px;height:1px;background:linear-gradient(to right,var(--red),transparent)}
 
+/* ── CLIENTES ── */
+#clientes{
+  background:var(--bg);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:3rem 0;
+  overflow:hidden;
+}
+.clientes-header{
+  text-align:center;
+  margin-bottom:2rem;
+}
+.ticker-wrap{
+  position:relative;
+  overflow:hidden;
+}
+.ticker-wrap::before,.ticker-wrap::after{
+  content:'';
+  position:absolute;top:0;bottom:0;width:180px;z-index:2;
+  pointer-events:none;
+}
+.ticker-wrap::before{
+  left:0;
+  background:linear-gradient(to right,var(--bg),transparent);
+}
+.ticker-wrap::after{
+  right:0;
+  background:linear-gradient(to left,var(--bg),transparent);
+}
+.ticker-track{
+  display:flex;align-items:center;gap:0;
+  width:max-content;
+  animation:ticker-scroll 30s linear infinite;
+}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{
+  font-size:1.5rem;font-weight:800;
+  letter-spacing:-.03em;
+  color:var(--w30);
+  padding:0 1.5rem;
+  transition:color .3s;
+  white-space:nowrap;
+}
+.ticker-item:hover{color:#fff}
+.ticker-sep{
+  color:var(--red);font-weight:900;font-size:1.2rem;
+  flex-shrink:0;
+}
+@keyframes ticker-scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
 /* ── MANIFIESTO ── */
 #manifiesto{
   padding:100px 0;
@@ -700,6 +753,58 @@ footer{
         <span class="scroll-bar"></span>
     </div>
 </section>
+
+<!-- ── CLIENTES ── -->
+<div id="clientes">
+    <div class="clientes-header reveal">
+        <span class="label">Empresas que confían en nosotros</span>
+    </div>
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <span class="ticker-item">Telefónica</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Santander</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Inditex</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">BBVA</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">El Corte Inglés</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Mapfre</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Iberdrola</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Meliá Hotels</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Acciona</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Ferrovial</span>
+            <span class="ticker-sep">·</span>
+            <!-- duplicado para loop infinito -->
+            <span class="ticker-item">Telefónica</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Santander</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Inditex</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">BBVA</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">El Corte Inglés</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Mapfre</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Iberdrola</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Meliá Hotels</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Acciona</span>
+            <span class="ticker-sep">·</span>
+            <span class="ticker-item">Ferrovial</span>
+            <span class="ticker-sep">·</span>
+        </div>
+    </div>
+</div>
 
 <!-- ── MANIFIESTO ── -->
 <section id="manifiesto">
