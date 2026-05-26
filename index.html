@@ -146,23 +146,17 @@ nav.scrolled{
 .hero-title-line2{display:block;color:var(--red);position:relative}
 .hero-title-line2::after{
   content:'';
-  position:absolute;top:-5%;left:-60%;
-  width:30%;height:110%;
-  background:linear-gradient(90deg,
-    transparent 0%,
-    rgba(255,255,255,.1) 30%,
-    rgba(255,255,255,.95) 48%,
-    rgba(255,255,255,1) 50%,
-    rgba(255,255,255,.95) 52%,
-    rgba(255,255,255,.1) 70%,
-    transparent 100%
-  );
-  animation:shine-sweep 4.5s ease-in-out infinite;
+  position:absolute;bottom:-6px;left:0;
+  width:100%;height:5px;
+  background:var(--red);
+  box-shadow:0 0 14px rgba(229,0,11,.7),0 0 4px rgba(229,0,11,.5);
+  transform:scaleX(0);transform-origin:left;
+  animation:underline-draw 1.1s cubic-bezier(.4,0,.2,1) .4s forwards;
   pointer-events:none;
 }
-@keyframes shine-sweep{
-  0%,15%{left:-60%}
-  65%,100%{left:110%}
+@keyframes underline-draw{
+  0%{transform:scaleX(0)}
+  100%{transform:scaleX(1)}
 }
 .hero-bottom{
   display:flex;align-items:flex-end;justify-content:space-between;
