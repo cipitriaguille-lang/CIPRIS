@@ -681,11 +681,11 @@ footer{
     <div class="container">
         <div class="manifiesto-inner">
             <div class="manifiesto-label reveal">
+                <span class="label">Nuestra postura</span>
                 <div class="familiar-wrap">
                     <span class="familiar-text" id="familiar-text"></span>
                     <span class="familiar-cursor" id="familiar-cursor">|</span>
                 </div>
-                <span class="label">Nuestra postura</span>
             </div>
             <p class="manifiesto-text reveal reveal-delay-1">
                 Las empresas no necesitan más herramientas.<br>
@@ -1270,7 +1270,7 @@ function easeOut(t){return 1-Math.pow(1-t,3)}
     new IntersectionObserver(entries=>{
         if(!entries[0].isIntersecting||started)return;
         started=true;
-        let full='';
+        let done=[];
         let li=0,ci=0;
         function type(){
             if(li>=lines.length){
@@ -1278,12 +1278,13 @@ function easeOut(t){return 1-Math.pow(1-t,3)}
                 el.classList.add('typed');
                 return;
             }
-            if(ci<lines[li].length){
-                full+=lines[li][ci];
-                el.innerHTML=lines.slice(0,li).join('<br>')+(li>0?'<br>':'')+full;
+            if(ci<=lines[li].length){
+                const current=lines[li].substring(0,ci);
+                el.innerHTML=[...done,current].join('<br>');
                 ci++;
                 setTimeout(type,90);
             } else {
+                done.push(lines[li]);
                 li++;ci=0;
                 setTimeout(type,300);
             }
