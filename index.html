@@ -145,16 +145,23 @@ nav.scrolled{
 .hero-title-line2{display:block;color:var(--red);position:relative}
 .hero-title-line2::after{
   content:'';
-  position:absolute;top:-10%;left:-100%;
-  width:60%;height:120%;
-  background:linear-gradient(120deg,transparent 0%,rgba(255,255,255,.55) 50%,transparent 100%);
-  animation:shine-sweep 4s ease-in-out infinite;
+  position:absolute;top:-5%;left:-60%;
+  width:30%;height:110%;
+  background:linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,.1) 30%,
+    rgba(255,255,255,.95) 48%,
+    rgba(255,255,255,1) 50%,
+    rgba(255,255,255,.95) 52%,
+    rgba(255,255,255,.1) 70%,
+    transparent 100%
+  );
+  animation:shine-sweep 4.5s ease-in-out infinite;
   pointer-events:none;
-  clip-path:inset(0);
 }
 @keyframes shine-sweep{
-  0%,30%{left:-100%}
-  60%,100%{left:150%}
+  0%,15%{left:-60%}
+  65%,100%{left:110%}
 }
 .hero-bottom{
   display:flex;align-items:flex-end;justify-content:space-between;
