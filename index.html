@@ -142,7 +142,43 @@ nav.scrolled{
   margin-bottom:2.5rem;
 }
 .hero-title-line1{display:block;color:var(--w90)}
-.hero-title-line2{display:block;color:var(--red)}
+.hero-title-line2{
+  display:block;color:var(--red);
+  position:relative;
+  animation:glitch-main 5s infinite;
+}
+.hero-title-line2::before,.hero-title-line2::after{
+  content:'sin filtros.';
+  position:absolute;top:0;left:0;
+  width:100%;height:100%;
+  color:var(--red);
+}
+.hero-title-line2::before{
+  animation:glitch-top 5s infinite;
+  clip-path:polygon(0 0,100% 0,100% 38%,0 38%);
+}
+.hero-title-line2::after{
+  animation:glitch-bot 5s infinite;
+  clip-path:polygon(0 62%,100% 62%,100% 100%,0 100%);
+}
+@keyframes glitch-main{
+  0%,88%,100%{transform:none;opacity:1}
+  89%{transform:skewX(-3deg);opacity:.9}
+  91%{transform:skewX(3deg)}
+  93%{transform:none}
+}
+@keyframes glitch-top{
+  0%,88%,100%{transform:none;opacity:0}
+  89%{transform:translate(-4px,-2px);opacity:.8}
+  91%{transform:translate(4px,2px);opacity:.5}
+  93%{transform:none;opacity:0}
+}
+@keyframes glitch-bot{
+  0%,88%,100%{transform:none;opacity:0}
+  89%{transform:translate(4px,2px);opacity:.8}
+  91%{transform:translate(-4px,-2px);opacity:.5}
+  93%{transform:none;opacity:0}
+}
 .hero-bottom{
   display:flex;align-items:flex-end;justify-content:space-between;
   gap:4rem;
