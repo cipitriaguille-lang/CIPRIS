@@ -171,11 +171,25 @@ nav.scrolled{
 .manifiesto-inner{
   display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:center;
 }
-.manifiesto-label{display:flex;flex-direction:column;gap:.75rem}
-.manifiesto-num{
-  font-size:7rem;font-weight:900;
-  color:var(--line);letter-spacing:-.06em;line-height:1;
+.manifiesto-label{display:flex;flex-direction:column;gap:1.25rem}
+.familiar-wrap{display:flex;align-items:flex-start;gap:4px}
+.familiar-text{
+  font-size:clamp(2rem,3.5vw,3rem);
+  font-weight:900;letter-spacing:-.04em;
+  line-height:1.1;color:#fff;display:block;
 }
+.familiar-text.typed{animation:familiar-glow 3.5s ease-in-out infinite}
+@keyframes familiar-glow{
+  0%,100%{text-shadow:none}
+  50%{text-shadow:0 0 24px rgba(229,0,11,.5),0 0 8px rgba(229,0,11,.3)}
+}
+.familiar-cursor{
+  font-size:clamp(2rem,3.5vw,3rem);font-weight:900;
+  color:var(--red);line-height:1.1;
+  animation:blink-cur .65s step-end infinite;
+}
+.familiar-cursor.hide{display:none}
+@keyframes blink-cur{0%,100%{opacity:1}50%{opacity:0}}
 .manifiesto-text{
   font-size:clamp(1.4rem,2.5vw,2rem);
   font-weight:600;line-height:1.45;
@@ -667,7 +681,10 @@ footer{
     <div class="container">
         <div class="manifiesto-inner">
             <div class="manifiesto-label reveal">
-                <span class="manifiesto-num">01</span>
+                <div class="familiar-wrap">
+                    <span class="familiar-text" id="familiar-text"></span>
+                    <span class="familiar-cursor" id="familiar-cursor">|</span>
+                </div>
                 <span class="label">Nuestra postura</span>
             </div>
             <p class="manifiesto-text reveal reveal-delay-1">
@@ -1242,6 +1259,38 @@ function countUp(el,end,suffix='',decimals=0){
     requestAnimationFrame(step);
 }
 function easeOut(t){return 1-Math.pow(1-t,3)}
+
+/* ── TYPEWRITER MANIFIESTO ── */
+(function(){
+    const el=document.getElementById('familiar-text');
+    const cur=document.getElementById('familiar-cursor');
+    if(!el||!cur)return;
+    const lines=['¿TE SUENA','FAMILIAR?'];
+    let started=false;
+    new IntersectionObserver(entries=>{
+        if(!entries[0].isIntersecting||started)return;
+        started=true;
+        let full='';
+        let li=0,ci=0;
+        function type(){
+            if(li>=lines.length){
+                cur.classList.add('hide');
+                el.classList.add('typed');
+                return;
+            }
+            if(ci<lines[li].length){
+                full+=lines[li][ci];
+                el.innerHTML=lines.slice(0,li).join('<br>')+(li>0?'<br>':'')+full;
+                ci++;
+                setTimeout(type,90);
+            } else {
+                li++;ci=0;
+                setTimeout(type,300);
+            }
+        }
+        setTimeout(type,500);
+    },{threshold:.5}).observe(el);
+})();
 </script>
 </body>
 </html>
