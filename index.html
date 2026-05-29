@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- CIPRIS v2 -->
+<!-- RPG Technology — Soluciones Audiovisuales -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIPRIS — Consultoría de Marketing 360</title>
-    <meta name="description" content="CIPRIS. Consultoría de marketing 360. Diagnosticamos antes de ejecutar. Un único interlocutor responsable de tus resultados.">
-    <meta property="og:title" content="CIPRIS — Consultoría de Marketing 360">
-    <meta property="og:description" content="No somos tu agencia. Somos el partner que diagnostica, decide y ejecuta.">
+    <title>RPG Technology — Soluciones Audiovisuales LED</title>
+    <meta name="description" content="RPG Technology. Líder en soluciones audiovisuales: pantallas LED, salas de control, señalización digital y tecnología AV para cualquier escala y entorno.">
+    <meta property="og:title" content="RPG Technology — Soluciones Audiovisuales LED">
+    <meta property="og:description" content="Fabricamos e instalamos pantallas LED, salas de control y soluciones AV de alto impacto visual.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,41 +17,44 @@
 /* ── RESET ── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
-body{font-family:'Inter',sans-serif;background:#080808;color:#fff;overflow-x:hidden;cursor:none}
+body{font-family:'Inter',sans-serif;background:#070B14;color:#fff;overflow-x:hidden;cursor:none}
 
 /* ── CURSOR ── */
 #cursor{position:fixed;pointer-events:none;z-index:9999;will-change:left,top}
-#cursor svg{display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5));transition:transform .2s cubic-bezier(.4,0,.2,1)}
-#cursor.hover svg{transform:scale(1.12)}
+#cursor svg{display:block;filter:drop-shadow(0 1px 4px rgba(0,0,0,.6));transition:transform .2s cubic-bezier(.4,0,.2,1)}
+#cursor.hover svg{transform:scale(1.15)}
 
 /* ── VARIABLES ── */
 :root{
-  --red:#E5000B;
-  --red-d:#B8000A;
-  --red-l:#FF1A24;
-  --bg:#080808;
-  --bg2:#0F0F0F;
-  --bg3:#161616;
-  --line:rgba(255,255,255,.07);
+  --blue:#1A5CFF;
+  --blue-d:#1248CC;
+  --blue-l:#3D7AFF;
+  --cyan:#00C8F0;
+  --bg:#070B14;
+  --bg2:#0C1020;
+  --bg3:#111826;
+  --line:rgba(255,255,255,.065);
   --w90:rgba(255,255,255,.9);
   --w60:rgba(255,255,255,.6);
   --w30:rgba(255,255,255,.3);
   --w10:rgba(255,255,255,.1);
   --w05:rgba(255,255,255,.05);
+  --glow:rgba(26,92,255,.55);
+  --glow-cyan:rgba(0,200,240,.4);
 }
 
 /* ── TYPOGRAPHY ── */
-.label{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.label{font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
 h1,h2,h3,h4{line-height:1.05;letter-spacing:-.03em}
 
 /* ── LAYOUT ── */
-.container{max-width:1240px;margin:0 auto;padding:0 2.5rem}
+.container{max-width:1280px;margin:0 auto;padding:0 2.5rem}
 section{padding:130px 0}
 
 /* ── BUTTONS ── */
 .btn{
   display:inline-flex;align-items:center;gap:.6rem;
-  padding:1rem 2rem;border-radius:3px;
+  padding:1rem 2rem;border-radius:4px;
   font-family:'Inter',sans-serif;font-size:.875rem;font-weight:600;
   text-decoration:none;border:1px solid transparent;
   transition:all .25s cubic-bezier(.4,0,.2,1);cursor:none;
@@ -59,1368 +62,1396 @@ section{padding:130px 0}
 }
 .btn::before{
   content:'';position:absolute;inset:0;
-  background:rgba(255,255,255,.08);
+  background:rgba(255,255,255,.07);
   transform:translateX(-101%);
   transition:transform .3s cubic-bezier(.4,0,.2,1);
 }
 .btn:hover::before{transform:translateX(0)}
-.btn-primary{background:var(--red);color:#fff;border-color:var(--red)}
-.btn-primary{box-shadow:0 0 18px rgba(229,0,11,.3),0 0 6px rgba(229,0,11,.4)}
-.btn-primary:hover{background:var(--red-d);border-color:var(--red-d);transform:translateY(-2px);box-shadow:0 0 12px rgba(229,0,11,.9),0 0 40px rgba(229,0,11,.6),0 0 80px rgba(229,0,11,.3),0 12px 24px rgba(229,0,11,.35)}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue);box-shadow:0 0 20px var(--glow),0 0 6px rgba(26,92,255,.4)}
+.btn-primary:hover{background:var(--blue-d);border-color:var(--blue-d);transform:translateY(-2px);box-shadow:0 0 14px var(--glow),0 0 45px rgba(26,92,255,.6),0 0 90px rgba(26,92,255,.3),0 14px 28px rgba(26,92,255,.3)}
 .btn-ghost{background:transparent;color:#fff;border-color:var(--w30)}
 .btn-ghost:hover{border-color:#fff;transform:translateY(-2px)}
-.btn-white{background:#fff;color:var(--red);border-color:#fff}
-.btn-white:hover{background:var(--bg);color:#fff;border-color:var(--bg);transform:translateY(-2px)}
+.btn-cyan{background:var(--cyan);color:#070B14;border-color:var(--cyan);font-weight:700}
+.btn-cyan:hover{background:#00b8dc;transform:translateY(-2px);box-shadow:0 0 20px var(--glow-cyan)}
 .btn-lg{padding:1.2rem 2.5rem;font-size:1rem}
+.btn-outline-cyan{background:transparent;color:var(--cyan);border-color:var(--cyan)}
+.btn-outline-cyan:hover{background:rgba(0,200,240,.1);transform:translateY(-2px)}
 
 /* ── NAV ── */
 nav{
   position:fixed;top:0;left:0;right:0;z-index:1000;
-  padding:1.75rem 2.5rem;
+  padding:1.6rem 2.5rem;
   display:flex;align-items:center;justify-content:space-between;
   transition:all .4s ease;
 }
 nav.scrolled{
-  background:rgba(8,8,8,.95);
-  backdrop-filter:blur(24px);
+  background:rgba(7,11,20,.96);
+  backdrop-filter:blur(28px);
   border-bottom:1px solid var(--line);
-  padding:1.1rem 2.5rem;
+  padding:1rem 2.5rem;
 }
-.nav-logo{display:flex;flex-direction:column;align-items:flex-start;gap:.15rem}
-.nav-tagline{font-size:.62rem;font-weight:500;letter-spacing:.08em;color:#fff;white-space:nowrap;opacity:.75}
-.nav-logo img{
-  height:70px;
-  mix-blend-mode:screen;
-  transition:opacity .25s;
+.nav-logo{display:flex;align-items:center;gap:.75rem;text-decoration:none}
+.nav-logo-mark{
+  width:38px;height:38px;border-radius:6px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-size:.95rem;font-weight:900;color:#fff;letter-spacing:-.03em;
+  box-shadow:0 0 16px var(--glow);
+  transition:box-shadow .3s;
 }
-.nav-logo img:hover{opacity:.8}
-.nav-links{display:flex;align-items:center;gap:3rem;list-style:none}
+.nav-logo:hover .nav-logo-mark{box-shadow:0 0 28px var(--glow),0 0 8px rgba(0,200,240,.4)}
+.nav-logo-text{display:flex;flex-direction:column;gap:.05rem}
+.nav-logo-name{font-size:.92rem;font-weight:800;letter-spacing:-.01em;color:#fff}
+.nav-logo-sub{font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:var(--w30)}
+.nav-links{display:flex;align-items:center;gap:2.75rem;list-style:none}
 .nav-links a{
   color:var(--w60);text-decoration:none;
-  font-size:.85rem;font-weight:500;
+  font-size:.84rem;font-weight:500;
   position:relative;transition:color .2s;
 }
 .nav-links a::after{
   content:'';position:absolute;bottom:-4px;left:0;
-  width:0;height:1px;background:var(--red);
+  width:0;height:1px;background:var(--cyan);
   transition:width .3s cubic-bezier(.4,0,.2,1);
 }
 .nav-links a:hover{color:#fff}
 .nav-links a:hover::after{width:100%}
-.nav-cta{display:flex;gap:.75rem}
-.nav-btn{padding:.6rem 1.4rem;font-size:.82rem}
+.nav-cta{display:flex;gap:.65rem}
+.nav-btn{padding:.55rem 1.3rem;font-size:.8rem}
 
 /* ── HERO ── */
 #hero{
   min-height:100vh;
-  display:flex;flex-direction:column;justify-content:center;
+  display:flex;flex-direction:column;justify-content:flex-end;
   position:relative;overflow:hidden;
-  padding:0 2.5rem;
+  padding:0 2.5rem 7rem;
 }
-#particles-canvas{
+#particles-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
+
+/* LED pixel grid overlay */
+.hero-grid{
   position:absolute;inset:0;
-  width:100%;height:100%;
-  opacity:.6;
+  background-image:
+    linear-gradient(rgba(26,92,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(26,92,255,.035) 1px,transparent 1px);
+  background-size:44px 44px;
+  pointer-events:none;z-index:1;
 }
+.hero-vignette{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 60% at 50% 100%,transparent,var(--bg) 80%);
+  pointer-events:none;z-index:1;
+}
+
 .hero-content{
   position:relative;z-index:2;
-  max-width:1240px;margin:0 auto;width:100%;
-  padding-top:80px;
+  max-width:1280px;margin:0 auto;width:100%;
 }
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:.75rem;
-  margin-bottom:2.5rem;
+  margin-bottom:2rem;
 }
-.eyebrow-line{width:40px;height:1px;background:var(--red)}
-.eyebrow-text{
-  font-size:.72rem;font-weight:700;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--w60);
+.eyebrow-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 10px var(--cyan);
+  animation:pulse-dot 2s ease-in-out infinite;
 }
+@keyframes pulse-dot{0%,100%{box-shadow:0 0 6px var(--cyan)}50%{box-shadow:0 0 16px var(--cyan),0 0 28px rgba(0,200,240,.4)}}
+.eyebrow-text{font-size:.72rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--w60)}
 .hero-title{
-  font-size:clamp(4rem,10vw,10rem);
-  font-weight:900;line-height:.93;
-  letter-spacing:-.04em;
-  margin-bottom:2.5rem;
+  font-size:clamp(3.8rem,9vw,9.5rem);
+  font-weight:900;line-height:.92;
+  letter-spacing:-.045em;
+  margin-bottom:3rem;
 }
-.hero-title-line1{display:block;color:var(--w90)}
-.hero-title-line2{display:block;color:var(--red);position:relative;-webkit-text-stroke:1.5px rgba(255,255,255,.55);paint-order:stroke fill}
-.hero-title-line2::after{
-  content:'';
-  position:absolute;bottom:-6px;left:0;
-  width:100%;height:5px;
-  background:var(--red);
-  box-shadow:0 0 14px rgba(229,0,11,.7),0 0 4px rgba(229,0,11,.5);
-  transform:scaleX(0);transform-origin:left;
-  animation:underline-draw 1.1s cubic-bezier(.4,0,.2,1) .4s forwards;
-  pointer-events:none;
-}
-@keyframes underline-draw{
-  0%{transform:scaleX(0)}
-  100%{transform:scaleX(1)}
+.hero-t1{display:block;color:#fff}
+.hero-t2{display:block;color:#fff}
+.hero-t3{
+  display:block;
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
 }
 .hero-bottom{
   display:flex;align-items:flex-end;justify-content:space-between;
   gap:4rem;
 }
 .hero-sub{
-  font-size:clamp(.95rem,1.4vw,1.15rem);
-  color:var(--w60);max-width:480px;
+  font-size:clamp(.95rem,1.3vw,1.1rem);
+  color:var(--w60);max-width:500px;
   line-height:1.75;font-weight:400;
 }
+.hero-sub strong{color:var(--w90)}
 .hero-actions{display:flex;gap:1rem;flex-wrap:wrap;flex-shrink:0}
+
+/* scroll cue */
 .hero-scroll{
-  position:absolute;bottom:2.5rem;left:2.5rem;
-  display:flex;align-items:center;gap:1rem;
-  z-index:2;
+  position:absolute;bottom:2.5rem;right:2.5rem;
+  display:flex;align-items:center;gap:.75rem;z-index:2;
 }
-.scroll-text{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--w30)}
-.scroll-bar{width:60px;height:1px;background:linear-gradient(to right,var(--red),transparent)}
+.scroll-text{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--w30)}
+.scroll-line{width:1px;height:44px;background:linear-gradient(to bottom,transparent,var(--cyan))}
 
-/* ── CLIENTES ── */
+/* ── CLIENTS TICKER ── */
 #clientes{
-  background:var(--bg3);
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  padding:4rem 0;
-  overflow:hidden;
-}
-.clientes-header{
-  text-align:center;
-  margin-bottom:2rem;
-}
-.ticker-wrap{
-  position:relative;
-  overflow:hidden;
-}
-.ticker-wrap::before,.ticker-wrap::after{
-  content:'';
-  position:absolute;top:0;bottom:0;width:180px;z-index:2;
-  pointer-events:none;
-}
-.ticker-wrap::before{
-  left:0;
-  background:linear-gradient(to right,var(--bg),transparent);
-}
-.ticker-wrap::after{
-  right:0;
-  background:linear-gradient(to left,var(--bg),transparent);
-}
-.ticker-track{
-  display:flex;align-items:center;gap:0;
-  width:max-content;
-  animation:ticker-scroll 30s linear infinite;
-}
-.ticker-track:hover{animation-play-state:paused}
-.ticker-item{
-  font-size:1.5rem;font-weight:800;
-  letter-spacing:-.03em;
-  color:var(--w60);
-  padding:0 1.5rem;
-  transition:color .3s;
-  white-space:nowrap;
-}
-.ticker-item:hover{color:#fff}
-.ticker-sep{
-  color:var(--red);font-weight:900;font-size:1.2rem;
-  flex-shrink:0;
-}
-@keyframes ticker-scroll{
-  0%{transform:translateX(0)}
-  100%{transform:translateX(-50%)}
-}
-
-/* ── MANIFIESTO ── */
-#manifiesto{
-  padding:100px 0;
-  border-top:1px solid var(--line);
-  border-bottom:1px solid var(--line);
   background:var(--bg2);
-}
-.manifiesto-inner{
-  display:grid;grid-template-columns:1fr 2fr;gap:6rem;align-items:center;
-}
-.manifiesto-label{display:flex;flex-direction:column;gap:1.25rem}
-.familiar-wrap{display:flex;align-items:flex-start;gap:4px}
-.familiar-text{
-  font-size:clamp(2.8rem,5vw,4.5rem);
-  font-weight:900;letter-spacing:-.04em;
-  line-height:1.1;color:#fff;display:block;
-}
-.familiar-text.typed{animation:familiar-glow 3.5s ease-in-out infinite}
-@keyframes familiar-glow{
-  0%,100%{text-shadow:none}
-  50%{text-shadow:0 0 24px rgba(229,0,11,.5),0 0 8px rgba(229,0,11,.3)}
-}
-.familiar-cursor{
-  font-size:clamp(2.8rem,5vw,4.5rem);font-weight:900;
-  color:var(--red);line-height:1.1;
-  animation:blink-cur .65s step-end infinite;
-}
-.familiar-cursor.hide{display:none}
-@keyframes blink-cur{0%,100%{opacity:1}50%{opacity:0}}
-.manifiesto-text{
-  font-size:clamp(1.4rem,2.5vw,2rem);
-  font-weight:600;line-height:1.45;
-  color:var(--w90);
-}
-.manifiesto-text em{color:var(--red);font-style:normal}
-.manifiesto-logo{
-  height:1.8em;vertical-align:middle;
-  mix-blend-mode:screen;
-  display:inline-block;margin-left:.2em;
-}
-
-/* ── SERVICIOS ── */
-#servicios{background:var(--bg)}
-.servicios-header{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  margin-bottom:5rem;gap:3rem;
-}
-.section-title{
-  font-size:clamp(2.2rem,4.5vw,4rem);
-  font-weight:900;letter-spacing:-.04em;
-  margin-top:.75rem;line-height:1.05;
-}
-.section-sub{font-size:1rem;color:var(--w60);line-height:1.75;max-width:380px;flex-shrink:0}
-
-.servicios-list{
-  display:grid;grid-template-columns:1fr 1fr;
-  border-top:1px solid var(--line);
-}
-.servicio-item{
-  padding:2.75rem 3rem;
-  border-bottom:1px solid var(--line);
-  border-right:1px solid var(--line);
-  position:relative;overflow:hidden;
-  transition:background .35s;
-  display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;
-}
-.servicio-item:nth-child(even){border-right:none}
-.servicio-item::before{
-  content:'';position:absolute;
-  top:0;left:0;bottom:0;width:0;
-  background:var(--red);
-  transition:width .35s cubic-bezier(.4,0,.2,1);
-}
-.servicio-item:hover{background:var(--bg3)}
-.servicio-item:hover::before{width:3px}
-.servicio-item:hover .s-num{color:var(--red)}
-.servicio-item:hover .s-title{transform:translateX(6px)}
-
-.s-num{
-  font-size:.7rem;font-weight:700;
-  letter-spacing:.12em;color:var(--w30);
-  padding-top:.25rem;
-  transition:color .35s;
-}
-.s-body{}
-.s-title{
-  font-size:1.2rem;font-weight:700;
-  margin-bottom:.6rem;
-  transition:transform .35s cubic-bezier(.4,0,.2,1);
-}
-.s-desc{font-size:.875rem;color:var(--w60);line-height:1.7}
-.s-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1rem}
-.s-tag{
-  font-size:.68rem;font-weight:600;letter-spacing:.06em;
-  padding:.2rem .65rem;border-radius:2px;
-  border:1px solid var(--line);color:var(--w30);
-  transition:border-color .25s,color .25s;
-}
-.servicio-item:hover .s-tag{border-color:rgba(229,0,11,.3);color:var(--red-l)}
-
-/* ── METODOLOGÍA ── */
-#metodologia{
-  background:var(--bg2);
-  border-top:1px solid var(--line);
-}
-.steps-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;margin-top:5rem;
-  border-top:1px solid var(--line);
-  border-left:1px solid var(--line);
-}
-.step-item{
-  padding:3rem 2.5rem;
-  border-right:1px solid var(--line);
-  border-bottom:1px solid var(--line);
-  position:relative;overflow:hidden;
-  transition:background .3s;
-}
-.step-item:hover{background:var(--bg3)}
-.step-item::after{
-  content:'';position:absolute;
-  bottom:0;left:0;right:0;height:2px;
-  background:var(--red);
-  opacity:0;
-  transition:opacity 2s ease;
-}
-.step-item:hover::after{opacity:1;transition:opacity .3s ease}
-.step-n{
-  font-size:4.5rem;font-weight:900;
-  color:rgba(255,255,255,.2);letter-spacing:-.04em;
-  line-height:1;margin-bottom:1.75rem;
-  transition:color 2s ease;
-}
-.step-item:hover .step-n{color:rgba(229,0,11,.85);transition:color .3s ease}
-.step-title{font-size:1.05rem;font-weight:700;margin-bottom:.75rem}
-.step-text{font-size:.85rem;color:var(--w60);line-height:1.7}
-
-/* ── STATS STRIP ── */
-#stats-strip{
-  background:var(--bg3);
   border-top:1px solid var(--line);
   border-bottom:1px solid var(--line);
   padding:3.5rem 0;
+  overflow:hidden;
 }
-.stats-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
+.clientes-label{text-align:center;margin-bottom:1.8rem}
+.ticker-wrap{position:relative;overflow:hidden}
+.ticker-wrap::before,.ticker-wrap::after{
+  content:'';position:absolute;top:0;bottom:0;width:200px;z-index:2;pointer-events:none;
 }
-.stat-item{
-  text-align:center;padding:1rem 2rem;
-  border-right:1px solid var(--line);
-}
-.stat-item:last-child{border-right:none}
-.stat-num{
-  font-size:3.2rem;font-weight:900;
-  color:var(--red);letter-spacing:-.04em;line-height:1;
-  font-variant-numeric:tabular-nums;
-  opacity:0;
-}
-.stat-num.lit{animation:bulb-on 2.2s ease-out forwards}
-.stat-num.pulsing{opacity:1;animation:glow-pulse 3.5s ease-in-out infinite}
-@keyframes bulb-on{
-  0%  {opacity:.03;text-shadow:none}
-  4%  {opacity:.9;text-shadow:0 0 30px rgba(229,0,11,.8)}
-  7%  {opacity:.02;text-shadow:none}
-  10% {opacity:.85;text-shadow:0 0 25px rgba(229,0,11,.7)}
-  13% {opacity:.02;text-shadow:none}
-  17% {opacity:.9;text-shadow:0 0 35px rgba(229,0,11,.9)}
-  20% {opacity:.05;text-shadow:none}
-  24% {opacity:.8;text-shadow:0 0 20px rgba(229,0,11,.6)}
-  27% {opacity:.04;text-shadow:none}
-  31% {opacity:1;text-shadow:0 0 40px rgba(229,0,11,.95)}
-  34% {opacity:.1;text-shadow:none}
-  38% {opacity:.95;text-shadow:0 0 28px rgba(229,0,11,.8)}
-  42% {opacity:.5;text-shadow:none}
-  47% {opacity:1;text-shadow:0 0 22px rgba(229,0,11,.7)}
-  55% {opacity:.7}
-  65% {opacity:1;text-shadow:0 0 18px rgba(229,0,11,.55)}
-  80% {opacity:.9}
-  100%{opacity:1;text-shadow:0 0 14px rgba(229,0,11,.4),0 0 4px rgba(229,0,11,.25)}
-}
-@keyframes glow-pulse{
-  0%,100%{text-shadow:none}
-  50%{text-shadow:0 0 28px rgba(229,0,11,.75),0 0 10px rgba(229,0,11,.5),0 0 4px rgba(255,80,80,.6)}
-}
-.stat-label{
-  font-size:.68rem;font-weight:700;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--w30);margin-top:.6rem;
-}
+.ticker-wrap::before{left:0;background:linear-gradient(to right,var(--bg2),transparent)}
+.ticker-wrap::after{right:0;background:linear-gradient(to left,var(--bg2),transparent)}
+.ticker-track{display:flex;align-items:center;width:max-content;animation:ticker-scroll 32s linear infinite}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{font-size:1.1rem;font-weight:700;letter-spacing:-.01em;color:var(--w30);padding:0 2rem;white-space:nowrap;transition:color .3s}
+.ticker-item:hover{color:#fff}
+.ticker-sep{color:var(--blue);font-size:.8rem;flex-shrink:0;opacity:.7}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-/* ── METHODOLOGY LINE ── */
-.method-line-wrap{
-  position:relative;height:2px;
-  margin-top:2.8rem;margin-bottom:0;overflow:hidden;
+/* ── ABOUT STRIP ── */
+#about-strip{
+  background:var(--bg);
+  padding:80px 0;
+  border-bottom:1px solid var(--line);
 }
-.method-line{
-  position:relative;height:2px;overflow:hidden;
-  background:linear-gradient(to right,var(--red),var(--red-l),var(--red));
-  transform:scaleX(0);transform-origin:left;
-  transition:transform 1.4s cubic-bezier(.4,0,.2,1);
-  box-shadow:0 0 12px rgba(229,0,11,.6);
-}
-.method-line.active{transform:scaleX(1)}
-.method-line.active::after{
-  content:'';position:absolute;
-  top:0;left:-75%;width:75%;height:100%;
-  background:linear-gradient(to right,transparent,rgba(255,200,200,.5),rgba(255,255,255,.95),rgba(255,200,200,.5),transparent);
-  animation:line-pulse 2.4s ease-in-out 1.6s infinite;
-}
-@keyframes line-pulse{
-  0%{left:-75%}
-  100%{left:140%}
-}
-
-/* ── PRECIOS ── */
-#precios{background:var(--bg)}
-.precios-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;margin-top:5rem;
-  border:1px solid var(--line);
-}
-.precio-card{
-  padding:3rem 2.5rem;
-  border-right:1px solid var(--line);
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:5rem;align-items:start}
+.about-headline{font-size:clamp(1.8rem,3.2vw,2.8rem);font-weight:900;letter-spacing:-.04em;margin-top:.75rem;line-height:1.1}
+.about-headline span{color:var(--cyan)}
+.about-body{font-size:.9rem;color:var(--w60);line-height:1.8;margin-top:1.5rem;max-width:400px}
+.about-stat{
+  padding:2rem;border:1px solid var(--line);border-radius:6px;
+  background:var(--bg2);
+  transition:border-color .3s,background .3s;
   position:relative;overflow:hidden;
-  transition:background .3s;
-  display:flex;flex-direction:column;
 }
-.precio-card .pr-features{flex:1}
-.precio-card .btn{margin-top:auto}
-.precio-card:last-child{border-right:none}
-.precio-card::before{
+.about-stat::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(26,92,255,.06),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.about-stat:hover{border-color:rgba(26,92,255,.4);background:var(--bg3)}
+.about-stat:hover::before{opacity:1}
+.about-stat-num{
+  font-size:3rem;font-weight:900;letter-spacing:-.04em;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;line-height:1;
+}
+.about-stat-label{font-size:.75rem;color:var(--w60);margin-top:.4rem;line-height:1.5}
+
+/* ── SOLUCIONES ── */
+#soluciones{background:var(--bg2)}
+.section-head{margin-bottom:5rem}
+.section-title{font-size:clamp(2.2rem,4.2vw,3.8rem);font-weight:900;letter-spacing:-.04em;margin-top:.75rem}
+.section-sub{font-size:.95rem;color:var(--w60);line-height:1.75;max-width:480px;margin-top:1rem}
+.solutions-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1.5px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;
+  overflow:hidden;
+}
+.sol-card{
+  background:var(--bg2);
+  padding:3rem 2.75rem;
+  position:relative;overflow:hidden;
+  transition:background .35s;
+  cursor:default;
+}
+.sol-card::after{
   content:'';position:absolute;
   top:0;left:0;right:0;height:0;
+  background:linear-gradient(180deg,var(--blue),transparent);
+  opacity:.6;
   transition:height .35s cubic-bezier(.4,0,.2,1);
 }
-.precio-card:not(.pop):hover{background:var(--bg3);box-shadow:0 0 30px rgba(229,0,11,.12),inset 0 0 0 1px rgba(229,0,11,.25)}
-.precio-card.pop{
-  background:var(--bg2);
-  box-shadow:inset 0 0 0 2px var(--red),0 0 60px rgba(229,0,11,.5),0 0 25px rgba(229,0,11,.35);
-  border-color:transparent;
-  transition:background .3s,box-shadow .3s;
+.sol-card:hover{background:var(--bg3)}
+.sol-card:hover::after{height:2px}
+.sol-icon{
+  width:52px;height:52px;border-radius:10px;
+  background:var(--bg3);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:2rem;
+  transition:background .3s,border-color .3s,box-shadow .3s;
 }
-.precio-card.pop:hover{
-  background:var(--bg3);
-  box-shadow:inset 0 0 0 2px var(--red),0 0 100px rgba(229,0,11,.75),0 0 50px rgba(229,0,11,.5),0 0 20px rgba(229,0,11,.3);
+.sol-card:hover .sol-icon{
+  background:rgba(26,92,255,.15);
+  border-color:rgba(26,92,255,.5);
+  box-shadow:0 0 18px rgba(26,92,255,.3);
 }
-.precio-card::before{background:var(--red)}
-.precio-card:hover::before{height:2px}
-.pop-tag{
-  display:inline-block;
-  font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:var(--red);margin-bottom:1.5rem;
+.sol-icon svg{transition:stroke .3s}
+.sol-card:hover .sol-icon svg{stroke:var(--cyan)}
+.sol-title{font-size:1.15rem;font-weight:700;margin-bottom:.65rem}
+.sol-desc{font-size:.855rem;color:var(--w60);line-height:1.75}
+.sol-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1.2rem}
+.sol-tag{
+  font-size:.65rem;font-weight:600;letter-spacing:.06em;
+  padding:.2rem .6rem;border-radius:3px;
+  border:1px solid var(--line);color:var(--w30);
+  transition:border-color .25s,color .25s;
 }
-.pr-name{font-size:1.5rem;font-weight:900;margin-bottom:.3rem;letter-spacing:-.02em}
-.pr-seg{font-size:.72rem;color:var(--w60);margin-bottom:1.75rem;font-weight:500}
-.precio-card.pop .pr-seg{color:var(--w60)}
-.pr-price{
-  font-size:2.6rem;font-weight:900;
-  color:var(--red);line-height:1;
-  letter-spacing:-.04em;margin-bottom:.2rem;
-}
-.precio-card.pop .pr-price{color:var(--red)}
-.pr-per{font-size:.75rem;color:var(--w60);margin-bottom:2rem}
-.precio-card.pop .pr-per{color:var(--w60)}
-.pr-line{height:1px;background:var(--line);margin-bottom:2rem}
-.precio-card.pop .pr-line{background:var(--line)}
-.pr-features{list-style:none;display:flex;flex-direction:column;gap:.65rem;margin-bottom:2.5rem}
-.pr-feature{
-  font-size:.83rem;color:var(--w60);
-  display:flex;gap:.6rem;align-items:baseline;
-  padding-left:.1rem;
-}
-.precio-card.pop .pr-feature{color:var(--w60)}
-.pr-feature::before{
-  content:'—';color:var(--red);font-weight:700;
-  flex-shrink:0;font-size:.7rem;
-}
-.precio-card.pop .pr-feature::before{color:var(--red)}
+.sol-card:hover .sol-tag{border-color:rgba(26,92,255,.35);color:var(--blue-l)}
 
-/* ── CTA STRIP ── */
-#cta-strip{
-  padding:100px 0;
-  background:var(--red);
+/* ── PROYECTOS ── */
+#proyectos{background:var(--bg)}
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:1.5rem;
+  margin-top:4rem;
+}
+.proj-card{
+  border-radius:8px;overflow:hidden;
+  position:relative;background:var(--bg2);
+  border:1px solid var(--line);
+  cursor:none;
+  transition:border-color .35s,box-shadow .35s;
+}
+.proj-card:hover{
+  border-color:rgba(26,92,255,.5);
+  box-shadow:0 0 35px rgba(26,92,255,.2),0 0 70px rgba(26,92,255,.08);
+}
+.proj-card.wide{grid-column:span 7}
+.proj-card.tall{grid-column:span 5;grid-row:span 2}
+.proj-card.med{grid-column:span 5}
+.proj-card.full{grid-column:span 12}
+.proj-thumb{
+  width:100%;aspect-ratio:16/9;
   position:relative;overflow:hidden;
 }
-#cta-strip::before{
-  content:'CIPRIS';
-  position:absolute;right:-2rem;top:50%;transform:translateY(-50%);
-  font-size:18rem;font-weight:900;letter-spacing:-.06em;
-  color:rgba(0,0,0,.12);line-height:1;pointer-events:none;
-  white-space:nowrap;
+.proj-card.tall .proj-thumb{aspect-ratio:auto;height:360px}
+.proj-card.full .proj-thumb{aspect-ratio:21/6}
+/* CSS gradient thumbnails simulating LED installations */
+.proj-img{
+  position:absolute;inset:0;
+  transition:transform .6s cubic-bezier(.4,0,.2,1);
+}
+.proj-card:hover .proj-img{transform:scale(1.04)}
+
+/* Each project gets a unique visual gradient */
+.p1 .proj-img{background:linear-gradient(135deg,#000 0%,#0a0f2a 30%,#1a3a7a 60%,#0066ff 80%,#00c8f0 100%);background-image:linear-gradient(135deg,#000 0%,#0a0f2a 30%,#1a3a7a 60%,#0066ff 80%,#00c8f0 100%),url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0' y='0' width='4' height='4' rx='1' fill='%231A5CFF' fill-opacity='0.3'/%3E%3C/svg%3E");background-size:cover,40px 40px}
+.p2 .proj-img{background:linear-gradient(160deg,#0a0810 0%,#1a0030 40%,#3d0066 65%,#7a00cc 85%,#b020ff 100%)}
+.p3 .proj-img{background:linear-gradient(120deg,#050a0c 0%,#003344 35%,#005566 60%,#008899 80%,#00c8f0 100%)}
+.p4 .proj-img{background:linear-gradient(140deg,#080800 0%,#1a1400 35%,#3d3000 60%,#7a6000 80%,#ffcc00 100%)}
+.p5 .proj-img{background:linear-gradient(150deg,#080a14 0%,#0c1840 35%,#1030a0 60%,#2060ff 80%,#3d8aff 100%)}
+.p6 .proj-img{background:linear-gradient(130deg,#040814 0%,#080f30 35%,#0c2060 60%,#1a4ccc 80%,#4080ff 100%)}
+
+/* Add fake LED array to thumbnails */
+.proj-thumb::after{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.08) 1px,transparent 1px);
+  background-size:8px 8px;
+  pointer-events:none;
+}
+/* gradient overlay on bottom */
+.proj-thumb::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:50%;
+  background:linear-gradient(to top,rgba(7,11,20,.95),transparent);
+  z-index:1;
+}
+.proj-info{
+  padding:1.5rem 2rem 2rem;
+}
+.proj-card.full .proj-info{
+  position:absolute;
+  bottom:0;left:0;right:0;
+  padding:2rem 2.5rem;
+  background:linear-gradient(to top,rgba(7,11,20,.97) 60%,transparent);
+}
+.proj-meta{
+  display:flex;align-items:center;gap:.65rem;
+  margin-bottom:.65rem;
+}
+.proj-cat{
+  font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cyan);
+}
+.proj-sep{width:1px;height:10px;background:var(--w30)}
+.proj-year{font-size:.62rem;color:var(--w30);letter-spacing:.05em}
+.proj-title{font-size:1.05rem;font-weight:700;letter-spacing:-.02em;line-height:1.25}
+.proj-card.full .proj-title{font-size:1.4rem}
+.proj-detail{font-size:.8rem;color:var(--w60);margin-top:.4rem;line-height:1.6}
+.proj-specs{
+  display:flex;gap:1rem;margin-top:.9rem;flex-wrap:wrap;
+}
+.proj-spec{
+  font-size:.65rem;font-weight:600;letter-spacing:.06em;
+  padding:.18rem .55rem;border-radius:3px;
+  background:rgba(26,92,255,.12);
+  border:1px solid rgba(26,92,255,.25);
+  color:var(--blue-l);
+}
+
+/* ── VIDEO REEL ── */
+#video-reel{
+  background:var(--bg2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:120px 0;
+}
+.video-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:6rem;align-items:center}
+.video-left{}
+.video-sub{font-size:.9rem;color:var(--w60);line-height:1.8;margin-top:1.5rem}
+.video-features{display:flex;flex-direction:column;gap:1.2rem;margin-top:2.5rem}
+.vid-feat{display:flex;align-items:flex-start;gap:1rem}
+.vid-feat-dot{
+  width:8px;height:8px;border-radius:50%;background:var(--cyan);
+  box-shadow:0 0 8px var(--cyan);flex-shrink:0;margin-top:.35rem;
+}
+.vid-feat-text{font-size:.85rem;color:var(--w60);line-height:1.6}
+.vid-feat-text strong{color:#fff;font-weight:600}
+.video-embed{
+  position:relative;border-radius:10px;overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 0 60px rgba(26,92,255,.2),0 0 120px rgba(26,92,255,.08);
+}
+.video-embed::after{
+  content:'';position:absolute;inset:0;
+  border-radius:10px;
+  box-shadow:inset 0 0 0 1px rgba(26,92,255,.3);
+  pointer-events:none;
+}
+.video-wrapper{position:relative;padding-bottom:56.25%;height:0}
+.video-wrapper iframe{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  border:none;
+}
+
+/* ── TECNOLOGÍA ── */
+#tecnologia{background:var(--bg)}
+.tech-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1.5px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+  margin-top:5rem;
+}
+.tech-item{
+  background:var(--bg);
+  padding:3.5rem 3rem;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.tech-item:hover{background:var(--bg2)}
+.tech-item::before{
+  content:'';position:absolute;
+  left:0;top:0;bottom:0;width:0;
+  background:var(--blue);
+  transition:width .35s cubic-bezier(.4,0,.2,1);
+}
+.tech-item:hover::before{width:3px}
+.tech-num{
+  font-size:4rem;font-weight:900;
+  color:rgba(255,255,255,.06);letter-spacing:-.04em;
+  line-height:1;margin-bottom:1.5rem;
+  transition:color .3s;
+}
+.tech-item:hover .tech-num{color:rgba(26,92,255,.3)}
+.tech-title{font-size:1.15rem;font-weight:700;margin-bottom:.65rem}
+.tech-desc{font-size:.865rem;color:var(--w60);line-height:1.75}
+.tech-highlight{color:var(--cyan);font-style:normal}
+
+/* ── STATS ── */
+#stats-strip{
+  background:var(--bg2);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:4rem 0;
+}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat-item{text-align:center;padding:1rem 2rem;border-right:1px solid var(--line)}
+.stat-item:last-child{border-right:none}
+.stat-num{
+  font-size:3.4rem;font-weight:900;
+  letter-spacing:-.04em;line-height:1;
+  font-variant-numeric:tabular-nums;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+  opacity:0;
+}
+.stat-num.visible{animation:stat-in 1.8s cubic-bezier(.4,0,.2,1) forwards}
+@keyframes stat-in{
+  0%{opacity:0;transform:translateY(12px)}
+  100%{opacity:1;transform:translateY(0)}
+}
+.stat-label{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--w30);margin-top:.6rem}
+
+/* ── CTA BAND ── */
+#cta-band{
+  padding:110px 0;
+  position:relative;overflow:hidden;
+  background:var(--bg2);
+}
+.cta-band-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 0% 50%,rgba(26,92,255,.12),transparent),
+    radial-gradient(ellipse 50% 70% at 100% 50%,rgba(0,200,240,.08),transparent);
+  pointer-events:none;
+}
+.cta-band-border{
+  position:absolute;left:0;right:0;top:0;height:1px;
+  background:linear-gradient(to right,transparent,var(--blue),var(--cyan),transparent);
+}
+.cta-band-border-b{
+  position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(26,92,255,.4),transparent);
 }
 .cta-inner{
-  display:flex;align-items:center;justify-content:space-between;gap:5rem;
-  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:5rem;position:relative;z-index:1;
 }
 .cta-title{
-  font-size:clamp(2rem,4vw,3.5rem);
-  font-weight:900;line-height:1.05;
-  letter-spacing:-.03em;
+  font-size:clamp(2rem,4vw,3.5rem);font-weight:900;line-height:1.05;letter-spacing:-.03em;
 }
-.cta-sub{font-size:1rem;color:rgba(255,255,255,.75);margin-top:.75rem;line-height:1.7}
-.cta-right{display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;min-width:240px}
-.cta-note{font-size:.75rem;color:rgba(255,255,255,.55);text-align:center}
+.cta-title span{
+  background:linear-gradient(90deg,var(--blue),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.cta-desc{font-size:.95rem;color:var(--w60);line-height:1.7;margin-top:.75rem}
+.cta-actions{display:flex;flex-direction:column;gap:.75rem;flex-shrink:0;min-width:260px}
 
 /* ── CONTACTO ── */
-#contacto{background:var(--bg2);padding:120px 0;position:relative;overflow:hidden}
-.lava-wrap{
-  position:absolute;inset:0;
-  pointer-events:none;z-index:0;
-  mix-blend-mode:screen;
-  opacity:.28;
+#contacto{background:var(--bg);padding:130px 0;position:relative;overflow:hidden}
+.contacto-glow{
+  position:absolute;
+  width:600px;height:600px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(26,92,255,.08),transparent 70%);
+  right:-150px;top:50%;transform:translateY(-50%);
+  pointer-events:none;
 }
-.lava-lamp{
-  position:absolute;inset:-25%;
-  filter:blur(55px) contrast(6);
-  background:#000;
-}
-.blob{position:absolute;border-radius:50%;background:#E5000B}
-.b1{width:280px;height:280px;left:42%;top:55%;animation:lava1 10s ease-in-out infinite}
-.b2{width:200px;height:200px;left:60%;top:15%;animation:lava2 13s ease-in-out infinite}
-.b3{width:160px;height:160px;left:30%;top:20%;animation:lava3 8s ease-in-out infinite}
-.b4{width:240px;height:260px;left:68%;top:45%;animation:lava4 15s ease-in-out 1s infinite}
-.b5{width:130px;height:130px;left:50%;top:75%;animation:lava5 9s ease-in-out 2s infinite}
-.b6{width:180px;height:180px;left:78%;top:10%;animation:lava6 11s ease-in-out 3s infinite}
-@keyframes lava1{
-  0%,100%{transform:translate(0,0) scale(1)}
-  33%{transform:translate(-60px,-120px) scale(1.15)}
-  66%{transform:translate(40px,-60px) scale(.9)}
-}
-@keyframes lava2{
-  0%,100%{transform:translate(0,0) scale(1)}
-  40%{transform:translate(30px,130px) scale(1.2)}
-  70%{transform:translate(-50px,80px) scale(.85)}
-}
-@keyframes lava3{
-  0%,100%{transform:translate(0,0) scale(1)}
-  30%{transform:translate(80px,100px) scale(1.1)}
-  60%{transform:translate(20px,160px) scale(.95)}
-}
-@keyframes lava4{
-  0%,100%{transform:translate(0,0) scale(1)}
-  45%{transform:translate(-80px,-100px) scale(1.25)}
-  75%{transform:translate(-30px,-50px) scale(.8)}
-}
-@keyframes lava5{
-  0%,100%{transform:translate(0,0) scale(1)}
-  35%{transform:translate(-40px,-140px) scale(1.3)}
-  65%{transform:translate(60px,-90px) scale(.9)}
-}
-@keyframes lava6{
-  0%,100%{transform:translate(0,0) scale(1)}
-  50%{transform:translate(-60px,120px) scale(1.15)}
-}
-.contacto-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:8rem;align-items:start}
-.c-overline{margin-bottom:3rem}
+.contacto-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:8rem;align-items:start;position:relative;z-index:1}
 .contact-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;letter-spacing:-.04em;margin-top:.75rem}
 .c-info{display:flex;flex-direction:column;gap:2rem;margin-top:3.5rem}
-.c-item{display:flex;gap:1.5rem;align-items:flex-start;padding-bottom:2rem;border-bottom:1px solid var(--line)}
+.c-item{padding-bottom:2rem;border-bottom:1px solid var(--line)}
 .c-item:last-child{border-bottom:none}
-.c-label{font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:.3rem}
+.c-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:.4rem}
 .c-val{font-size:.95rem;font-weight:500;color:var(--w90)}
+.c-sub{font-size:.8rem;color:var(--w30);margin-top:.2rem}
 
 /* FORM */
 .contact-form{display:flex;flex-direction:column;gap:1rem}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-grp{display:flex;flex-direction:column;gap:.4rem}
-.form-label{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--w30)}
+.form-label{font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--w30)}
 .form-input,.form-select,.form-textarea{
-  background:var(--bg3);border:1px solid var(--line);
+  background:var(--bg2);border:1px solid var(--line);
   color:#fff;padding:.9rem 1.1rem;
-  border-radius:3px;font-family:'Inter',sans-serif;
+  border-radius:4px;font-family:'Inter',sans-serif;
   font-size:.9rem;outline:none;
-  transition:border-color .25s,background .25s;
+  transition:border-color .25s,background .25s,box-shadow .25s;
   cursor:none;
 }
 .form-input:focus,.form-select:focus,.form-textarea:focus{
-  border-color:var(--red);background:rgba(229,0,11,.04);
+  border-color:var(--blue);
+  background:rgba(26,92,255,.04);
+  box-shadow:0 0 0 3px rgba(26,92,255,.1);
 }
 .form-input::placeholder,.form-textarea::placeholder{color:var(--w30)}
-.form-select{appearance:none;color:var(--w60);cursor:none}
-.form-select option{background:var(--bg3)}
+.form-select{appearance:none;color:var(--w60)}
+.form-select option{background:var(--bg2)}
 .form-textarea{resize:none;height:120px}
 
 /* ── FOOTER ── */
 footer{
-  background:var(--bg);
+  background:var(--bg2);
   border-top:1px solid var(--line);
   padding:5rem 0 2.5rem;
 }
 .footer-top{
-  display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;
+  display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;
   gap:4rem;padding-bottom:4rem;
   border-bottom:1px solid var(--line);
 }
-.footer-logo img{height:44px;mix-blend-mode:screen;margin-bottom:1.5rem}
-.footer-desc{font-size:.85rem;color:var(--w60);line-height:1.75;max-width:280px}
-.footer-social{display:flex;gap:.6rem;margin-top:1.5rem}
-.soc{
-  width:34px;height:34px;border:1px solid var(--line);border-radius:3px;
+.footer-brand{}
+.footer-logo-mark{
+  width:42px;height:42px;border-radius:7px;
+  background:linear-gradient(135deg,var(--blue),var(--cyan));
   display:flex;align-items:center;justify-content:center;
-  text-decoration:none;font-size:.75rem;font-weight:700;color:var(--w60);
-  transition:all .2s;cursor:none;
+  font-size:1rem;font-weight:900;color:#fff;margin-bottom:1.2rem;
+  box-shadow:0 0 18px var(--glow);
 }
-.soc:hover{background:var(--red);border-color:var(--red);color:#fff}
+.footer-desc{font-size:.84rem;color:var(--w60);line-height:1.8;max-width:270px;margin-top:.5rem}
+.footer-social{display:flex;gap:.55rem;margin-top:1.5rem}
+.soc{
+  width:34px;height:34px;border:1px solid var(--line);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:.72rem;font-weight:700;color:var(--w60);
+  transition:all .25s;cursor:none;
+}
+.soc:hover{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 12px var(--glow)}
 .footer-col h4{
-  font-size:.65rem;font-weight:700;letter-spacing:.15em;
-  text-transform:uppercase;color:var(--w30);margin-bottom:1.5rem;
+  font-size:.62rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--w30);margin-bottom:1.4rem;
 }
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:.65rem}
 .footer-links a{
-  color:var(--w60);text-decoration:none;font-size:.875rem;
-  transition:color .2s;position:relative;display:inline-block;cursor:none;
-}
-.footer-links a::after{
-  content:'';position:absolute;bottom:-1px;left:0;
-  width:0;height:1px;background:var(--red);
-  transition:width .25s;
+  color:var(--w60);text-decoration:none;font-size:.85rem;
+  transition:color .2s;cursor:none;
 }
 .footer-links a:hover{color:#fff}
-.footer-links a:hover::after{width:100%}
 .footer-bottom{
-  padding-top:2rem;
-  display:flex;align-items:center;justify-content:space-between;
+  padding-top:2rem;display:flex;align-items:center;justify-content:space-between;
 }
-.footer-copy{font-size:.78rem;color:var(--w30)}
+.footer-copy{font-size:.76rem;color:var(--w30)}
 .footer-legal{display:flex;gap:2rem}
-.footer-legal a{color:var(--w30);text-decoration:none;font-size:.78rem;transition:color .2s;cursor:none}
+.footer-legal a{color:var(--w30);text-decoration:none;font-size:.76rem;transition:color .2s;cursor:none}
 .footer-legal a:hover{color:#fff}
 
-/* ── ANIMATIONS ── */
-.reveal{
-  opacity:0;transform:translateY(32px);
-  transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1);
-}
-.reveal.visible{opacity:1;transform:translateY(0)}
+/* ── REVEAL ── */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.4,0,.2,1),transform .8s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:none}
 .reveal-delay-1{transition-delay:.1s}
 .reveal-delay-2{transition-delay:.2s}
 .reveal-delay-3{transition-delay:.3s}
 
 /* ── RESPONSIVE ── */
-@media(max-width:1024px){
-  .precios-grid{grid-template-columns:1fr 1fr}
-  .precio-card{border-right:1px solid var(--line)}
-  .precio-card:nth-child(even){border-right:none}
-  .steps-grid{grid-template-columns:1fr 1fr}
-  .manifiesto-inner{grid-template-columns:1fr;gap:2rem}
-  .manifiesto-num{font-size:4rem}
+@media(max-width:1100px){
+  .about-grid{grid-template-columns:1fr;gap:3rem}
+  .about-body{max-width:100%}
+  .solutions-grid{grid-template-columns:1fr 1fr}
+  .video-inner{grid-template-columns:1fr;gap:3.5rem}
+  .tech-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .proj-card.wide,.proj-card.tall,.proj-card.med,.proj-card.full{grid-column:span 12}
+  .proj-card.tall .proj-thumb{height:auto;aspect-ratio:16/9}
+  .proj-card.full .proj-thumb{aspect-ratio:16/9}
+  .proj-card.full .proj-info{position:static;background:none}
 }
 @media(max-width:768px){
   section{padding:80px 0}
   .nav-links{display:none}
-  .servicios-list{grid-template-columns:1fr}
-  .servicio-item:nth-child(even){border-right:1px solid var(--line)}
-  .servicios-header{flex-direction:column;align-items:flex-start}
+  .solutions-grid{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stat-item:nth-child(2){border-right:none}
+  .stat-item:nth-child(3){border-top:1px solid var(--line)}
+  .cta-inner{flex-direction:column;gap:2.5rem}
   .contacto-grid{grid-template-columns:1fr;gap:4rem}
   .footer-top{grid-template-columns:1fr 1fr;gap:2.5rem}
   .form-row{grid-template-columns:1fr}
-  .cta-inner{flex-direction:column;gap:2.5rem}
-  .steps-grid{grid-template-columns:1fr 1fr}
-  .precios-grid{grid-template-columns:1fr}
-  .precio-card{border-right:none;border-bottom:1px solid var(--line)}
   .hero-bottom{flex-direction:column;gap:2rem;align-items:flex-start}
+  .projects-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- CURSOR -->
-<div id="cursor"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="-1.5 -1.5 17.5 25.5"><path d="M0 0 L0 18 L5 13 L9 21 L12 20 L8 12 L14 12 Z" fill="#0D0D0D" stroke="white" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg></div>
+<!-- ── CURSOR ── -->
+<div id="cursor">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="-1.5 -1.5 17.5 25.5">
+    <path d="M0 0 L0 18 L5 13 L9 21 L12 20 L8 12 L14 12 Z" fill="#070B14" stroke="white" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+  </svg>
+</div>
 
 <!-- ── NAV ── -->
 <nav id="navbar">
-    <a href="#" class="nav-logo">
-        <img src="logo.png" alt="CIPRIS">
-    </a>
-    <ul class="nav-links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#metodologia">Metodología</a></li>
-        <li><a href="#precios">Precios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <div class="nav-cta">
-        <a href="#contacto" class="btn btn-ghost nav-btn">Hablar con nosotros</a>
-        <a href="#cta-strip" class="btn btn-primary nav-btn">Diagnóstico</a>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">RPG</div>
+    <div class="nav-logo-text">
+      <span class="nav-logo-name">RPG Technology</span>
+      <span class="nav-logo-sub">Soluciones Audiovisuales</span>
     </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#soluciones">Soluciones</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#video-reel">Showreel</a></li>
+    <li><a href="#tecnologia">Tecnología</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="#contacto" class="btn btn-ghost nav-btn">Hablar con nosotros</a>
+    <a href="#contacto" class="btn btn-primary nav-btn">Solicitar proyecto</a>
+  </div>
 </nav>
 
 <!-- ── HERO ── -->
 <section id="hero">
-    <canvas id="particles-canvas"></canvas>
+  <canvas id="particles-canvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
 
-    <div class="hero-content container">
-        <div class="hero-eyebrow">
-            <span class="eyebrow-line"></span>
-            <span class="eyebrow-text">Consultoría de Marketing 360</span>
-        </div>
-
-        <h1 class="hero-title">
-            <span class="hero-title-line1">Marketing</span>
-            <span class="hero-title-line2">sin filtros.</span>
-        </h1>
-
-        <div class="hero-bottom">
-            <p class="hero-sub">
-                No vendemos servicios sueltos. Diagnosticamos tu negocio, diseñamos la estrategia y ejecutamos todo bajo un único interlocutor responsable de tus resultados.
-            </p>
-            <div class="hero-actions">
-                <a href="#cta-strip" class="btn btn-primary btn-lg">Solicitar diagnóstico</a>
-                <a href="#servicios" class="btn btn-ghost btn-lg">Ver servicios</a>
-            </div>
-        </div>
+  <div class="hero-content container">
+    <div class="hero-eyebrow">
+      <div class="eyebrow-dot"></div>
+      <span class="eyebrow-text">Tecnología audiovisual de alto impacto</span>
     </div>
+    <h1 class="hero-title">
+      <span class="hero-t1">Pantallas LED.</span>
+      <span class="hero-t2">Salas de Control.</span>
+      <span class="hero-t3">Sin límites.</span>
+    </h1>
+    <div class="hero-bottom">
+      <p class="hero-sub">
+        Diseñamos, fabricamos e instalamos <strong>soluciones audiovisuales de alto impacto</strong>
+        para estadios, centros de control, retail, eventos y arquitectura. Desde el píxel
+        hasta la puesta en marcha.
+      </p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary btn-lg">Ver proyectos</a>
+        <a href="#soluciones" class="btn btn-ghost btn-lg">Nuestras soluciones</a>
+      </div>
+    </div>
+  </div>
 
+  <div class="hero-scroll">
+    <span class="scroll-text">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
 </section>
 
 <!-- ── CLIENTES ── -->
 <div id="clientes">
-    <div class="clientes-header">
-        <span class="label">Empresas que confían en nosotros</span>
+  <div class="clientes-label"><span class="label">Clientes &amp; partners de confianza</span></div>
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <span class="ticker-item">Estadio Santiago Bernabéu</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">IFEMA Madrid</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Aeropuertos AENA</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">El Corte Inglés</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Mediapro</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Telefónica</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Gobierno de España</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Claro Sports</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Meliá Hotels</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">L'Oréal</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Samsung Display</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Novastar</span>
+      <span class="ticker-sep">·</span>
+      <!-- duplicado loop -->
+      <span class="ticker-item">Estadio Santiago Bernabéu</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">IFEMA Madrid</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Aeropuertos AENA</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">El Corte Inglés</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Mediapro</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Telefónica</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Gobierno de España</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Claro Sports</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Meliá Hotels</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">L'Oréal</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Samsung Display</span>
+      <span class="ticker-sep">·</span>
+      <span class="ticker-item">Novastar</span>
+      <span class="ticker-sep">·</span>
     </div>
-    <div class="ticker-wrap">
-        <div class="ticker-track">
-            <span class="ticker-item">Grupo Barceló</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Hawkers</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Bodegas Torres</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Clínica Baviera</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Idealista</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Multiópticas</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Naturhouse</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Restalia</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Vocento</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">MásMóvil</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Campofrío</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Fotocasa</span>
-            <span class="ticker-sep">·</span>
-            <!-- duplicado para loop infinito -->
-            <span class="ticker-item">Grupo Barceló</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Hawkers</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Bodegas Torres</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Clínica Baviera</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Idealista</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Multiópticas</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Naturhouse</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Restalia</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Vocento</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">MásMóvil</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Campofrío</span>
-            <span class="ticker-sep">·</span>
-            <span class="ticker-item">Fotocasa</span>
-            <span class="ticker-sep">·</span>
-        </div>
-    </div>
+  </div>
 </div>
 
-<!-- ── MANIFIESTO ── -->
-<section id="manifiesto">
-    <div class="container">
-        <div class="manifiesto-inner">
-            <div class="manifiesto-label reveal">
-                <span class="label">Nuestra postura</span>
-                <div class="familiar-wrap">
-                    <span class="familiar-text" id="familiar-text"></span>
-                    <span class="familiar-cursor" id="familiar-cursor">|</span>
-                </div>
-            </div>
-            <p class="manifiesto-text reveal reveal-delay-1">
-                Las empresas no necesitan más herramientas.<br>
-                Necesitan <em>un interlocutor que entienda el negocio</em><br>
-                y decida qué herramientas usar, en qué orden<br>
-                y con qué métricas de éxito.<br>
-                Ese es CIPRIS.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- ── STATS STRIP ── -->
-<div id="stats-strip">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <div class="stat-num" data-count="7" data-suffix="">0</div>
-                <div class="stat-label">Líneas de servicio</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num" data-count="360" data-suffix="°">0°</div>
-                <div class="stat-label">Visión de negocio</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num" data-count="24" data-suffix="h">0h</div>
-                <div class="stat-label">Respuesta garantizada</div>
-            </div>
-            <div class="stat-item">
-                <div class="stat-num" data-count="100" data-suffix="%">0%</div>
-                <div class="stat-label">Transparencia</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ── SERVICIOS ── -->
-<section id="servicios">
-    <div class="container">
-        <div class="servicios-header">
-            <div class="reveal">
-                <span class="label">Servicios</span>
-                <h2 class="section-title">Siete disciplinas.<br>Una sola estrategia.</h2>
-            </div>
-            <p class="section-sub reveal reveal-delay-1">
-                Cada servicio funciona de forma autónoma o integrado en un plan 360. Tú eliges el punto de entrada.
-            </p>
-        </div>
-
-        <div class="servicios-list">
-            <div class="servicio-item reveal">
-                <span class="s-num">01</span>
-                <div class="s-body">
-                    <h3 class="s-title">Diagnóstico Estratégico</h3>
-                    <p class="s-desc">Auditoría 360° de tu situación real. Análisis competitivo, estado digital, customer journey y KPIs de negocio. Informe ejecutivo con plan de acción a 90-180 días.</p>
-                    <div class="s-tags"><span class="s-tag">Auditoría</span><span class="s-tag">Plan de acción</span><span class="s-tag">3-6 semanas</span></div>
-                </div>
-            </div>
-            <div class="servicio-item reveal reveal-delay-1">
-                <span class="s-num">02</span>
-                <div class="s-body">
-                    <h3 class="s-title">Identidad y Branding</h3>
-                    <p class="s-desc">Construimos o renovamos tu marca: naming, logotipo, sistema visual, manual de identidad, tono de voz y arquitectura de mensajes.</p>
-                    <div class="s-tags"><span class="s-tag">Naming</span><span class="s-tag">Logotipo</span><span class="s-tag">Manual de marca</span></div>
-                </div>
-            </div>
-            <div class="servicio-item reveal">
-                <span class="s-num">03</span>
-                <div class="s-body">
-                    <h3 class="s-title">Diseño y Desarrollo Web</h3>
-                    <p class="s-desc">Tu web como motor de captación y conversión. Diseño en Figma, desarrollo en Framer, Webflow o Next.js. Analytics, CRM e integración completa desde el primer día.</p>
-                    <div class="s-tags"><span class="s-tag">UX/UI</span><span class="s-tag">Desarrollo</span><span class="s-tag">CRO</span></div>
-                </div>
-            </div>
-            <div class="servicio-item reveal reveal-delay-1">
-                <span class="s-num">04</span>
-                <div class="s-body">
-                    <h3 class="s-title">Contenido y SEO</h3>
-                    <p class="s-desc">Estrategia de contenidos orgánicos alineada con tu embudo. Keyword research, calendario editorial, artículos pilar, link building y reporting mensual.</p>
-                    <div class="s-tags"><span class="s-tag">SEO técnico</span><span class="s-tag">Contenidos</span><span class="s-tag">Link building</span></div>
-                </div>
-            </div>
-            <div class="servicio-item reveal">
-                <span class="s-num">05</span>
-                <div class="s-body">
-                    <h3 class="s-title">Performance Marketing</h3>
-                    <p class="s-desc">Gestión profesional en Google Ads, Meta Ads, LinkedIn Ads y TikTok. Presupuesto publicitario 100% transparente bajo factura del cliente. Reporting semanal de resultados.</p>
-                    <div class="s-tags"><span class="s-tag">Google</span><span class="s-tag">Meta</span><span class="s-tag">LinkedIn</span><span class="s-tag">TikTok</span></div>
-                </div>
-            </div>
-            <div class="servicio-item reveal reveal-delay-1">
-                <span class="s-num">06</span>
-                <div class="s-body">
-                    <h3 class="s-title">Consultoría CRM y Ventas</h3>
-                    <p class="s-desc">Cerramos la brecha entre marketing y ventas. Diseño del embudo, implementación de HubSpot o Pipedrive, automatizaciones y formación al equipo comercial.</p>
-                    <div class="s-tags"><span class="s-tag">HubSpot</span><span class="s-tag">Pipedrive</span><span class="s-tag">Automatización</span></div>
-                </div>
-            </div>
-            <div class="servicio-item reveal" style="border-right:none;grid-column:span 2">
-                <span class="s-num">07</span>
-                <div class="s-body">
-                    <h3 class="s-title">Formación In-Company</h3>
-                    <p class="s-desc">Programas formativos a medida para equipos de marketing y ventas. Marketing digital, SEO, redes sociales, IA generativa aplicada y analítica avanzada. Presencial u online.</p>
-                    <div class="s-tags"><span class="s-tag">A medida</span><span class="s-tag">Presencial / Online</span><span class="s-tag">IA aplicada</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ── METODOLOGÍA ── -->
-<section id="metodologia">
-    <div class="container">
-        <div class="reveal">
-            <span class="label">Cómo trabajamos</span>
-            <h2 class="section-title" style="margin-top:.75rem;">Diagnóstico primero.<br>Siempre.</h2>
-        </div>
-        <div class="method-line-wrap"><div class="method-line" id="method-line"></div></div>
-        <div class="steps-grid">
-            <div class="step-item reveal">
-                <div class="step-n">01</div>
-                <h3 class="step-title">Diagnóstico</h3>
-                <p class="step-text">Antes de proponer nada, auditamos tu situación real: entorno, competencia, estado digital, funnel comercial y KPIs de negocio. Sin improvosación.</p>
-            </div>
-            <div class="step-item reveal reveal-delay-1">
-                <div class="step-n">02</div>
-                <h3 class="step-title">Estrategia</h3>
-                <p class="step-text">Diseñamos la hoja de ruta: objetivos SMART, selección de servicios y plan de acción priorizado por impacto real en el negocio del cliente.</p>
-            </div>
-            <div class="step-item reveal reveal-delay-2">
-                <div class="step-n">03</div>
-                <h3 class="step-title">Ejecución</h3>
-                <p class="step-text">Implementamos con nuestro equipo multidisciplinar. Un único punto de contacto y visibilidad total del proceso en tiempo real mediante dashboard compartido.</p>
-            </div>
-            <div class="step-item reveal reveal-delay-3">
-                <div class="step-n">04</div>
-                <h3 class="step-title">Reporting</h3>
-                <p class="step-text">Dashboard en directo, informe mensual y revisión trimestral estratégica. Resultados medibles, transparentes y comprometidos desde el primer contrato.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ── PRECIOS ── -->
-<section id="precios">
-    <div class="container">
-        <div class="reveal">
-            <span class="label">Precios</span>
-            <h2 class="section-title" style="margin-top:.75rem;">Transparentes<br>por principio.</h2>
-        </div>
-        <div class="precios-grid reveal">
-            <div class="precio-card">
-                <p class="pr-name">Starter</p>
-                <p class="pr-seg">Micro-pyme · autónomo</p>
-                <p class="pr-price">1.500€</p>
-                <p class="pr-per">/ mes · desde</p>
-                <div class="pr-line"></div>
-                <ul class="pr-features">
-                    <li class="pr-feature">1 línea de servicio principal</li>
-                    <li class="pr-feature">Dashboard de KPIs básico</li>
-                    <li class="pr-feature">Informe mensual estandarizado</li>
-                    <li class="pr-feature">Check-in semanal asíncrono</li>
-                </ul>
-                <a href="#contacto" class="btn btn-ghost" style="width:100%">Empezar</a>
-            </div>
-            <div class="precio-card pop">
-                <p class="pop-tag">Más contratado</p>
-                <p class="pr-name">Growth</p>
-                <p class="pr-seg">Pyme · 10-50 empleados</p>
-                <p class="pr-price">3.500€</p>
-                <p class="pr-per">/ mes · desde</p>
-                <div class="pr-line"></div>
-                <ul class="pr-features">
-                    <li class="pr-feature">2-3 líneas integradas</li>
-                    <li class="pr-feature">Dashboard live Looker Studio</li>
-                    <li class="pr-feature">Monthly performance review</li>
-                    <li class="pr-feature">Reporting semanal de campañas</li>
-                </ul>
-                <a href="#contacto" class="btn btn-primary" style="width:100%">Empezar</a>
-            </div>
-            <div class="precio-card">
-                <p class="pr-name">Scale</p>
-                <p class="pr-seg">Mid-corporate · 50-250 emp.</p>
-                <p class="pr-price">8.000€</p>
-                <p class="pr-per">/ mes · desde</p>
-                <div class="pr-line"></div>
-                <ul class="pr-features">
-                    <li class="pr-feature">4-5 líneas integradas</li>
-                    <li class="pr-feature">Reporting avanzado multicanal</li>
-                    <li class="pr-feature">Quarterly Business Review</li>
-                    <li class="pr-feature">SLA garantizado 24h hábiles</li>
-                </ul>
-                <a href="#contacto" class="btn btn-ghost" style="width:100%">Empezar</a>
-            </div>
-            <div class="precio-card" style="border-right:none">
-                <p class="pr-name">Enterprise</p>
-                <p class="pr-seg">Gran cuenta · +250 emp.</p>
-                <p class="pr-price">20.000€+</p>
-                <p class="pr-per">/ mes · a medida</p>
-                <div class="pr-line"></div>
-                <ul class="pr-features">
-                    <li class="pr-feature">Servicio 360 completo</li>
-                    <li class="pr-feature">Equipo dedicado en exclusiva</li>
-                    <li class="pr-feature">Modelos de performance fee</li>
-                    <li class="pr-feature">Acceso directo a dirección</li>
-                </ul>
-                <a href="#contacto" class="btn btn-ghost" style="width:100%">Hablar con nosotros</a>
-            </div>
-        </div>
-        <p class="reveal" style="margin-top:2rem;font-size:.82rem;color:var(--w30);text-align:center">
-            Proyectos puntuales desde 1.200€ · Descuento del 10% por compromiso anual · Sin tarifas horarias, sin letra pequeña
+<!-- ── ABOUT STRIP ── -->
+<div id="about-strip">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <span class="label">Quiénes somos</span>
+        <h2 class="about-headline">Especialistas en <span>tecnología LED</span> y AV profesional.</h2>
+        <p class="about-body">
+          RPG Technology nació para llevar la tecnología audiovisual profesional más avanzada a
+          todo tipo de entornos. Desde pequeñas salas corporativas hasta infraestructuras de estadios
+          o salas de control de misión crítica, dominamos cada escala con precisión técnica y
+          compromiso de resultado.
         </p>
+      </div>
+      <div class="about-stat reveal reveal-delay-1">
+        <div class="about-stat-num">+500</div>
+        <div class="about-stat-label">Proyectos completados<br>en más de 20 países</div>
+      </div>
+      <div class="about-stat reveal reveal-delay-2">
+        <div class="about-stat-num">15+</div>
+        <div class="about-stat-label">Años de experiencia<br>en soluciones AV avanzadas</div>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- ── SOLUCIONES ── -->
+<section id="soluciones">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">Soluciones</span>
+      <h2 class="section-title">De la idea<br>al píxel encendido.</h2>
+      <p class="section-sub">Tecnología audiovisual a medida para cada entorno, escala y propósito. Sin compromisos de calidad.</p>
+    </div>
+    <div class="solutions-grid reveal">
+
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3 class="sol-title">Pantallas LED Interior</h3>
+        <p class="sol-desc">Módulos LED de alta definición para lobbies, salas de conferencias, retail y espacios corporativos. Formato libre, cualquier tamaño y relación de aspecto.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">Indoor HD</span><span class="sol-tag">Pixel pitch fino</span><span class="sol-tag">Formato libre</span>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3 class="sol-title">Fachadas &amp; Outdoor LED</h3>
+        <p class="sol-desc">Pantallas LED para exteriores resistentes a la intemperie. Fachadas interactivas, marquesinas, vallas publicitarias digitales y cartelería de gran formato.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">IP65/IP66</span><span class="sol-tag">Alta luminosidad</span><span class="sol-tag">Gran formato</span>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/>
+          </svg>
+        </div>
+        <h3 class="sol-title">Salas de Control</h3>
+        <p class="sol-desc">Diseño e implantación de salas de control operativo y de misión crítica. Video walls con procesadores avanzados, gestión de fuentes y redundancia garantizada.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">Misión crítica</span><span class="sol-tag">Redundancia</span><span class="sol-tag">24/7</span>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+          </svg>
+        </div>
+        <h3 class="sol-title">LED Rental &amp; Eventos</h3>
+        <p class="sol-desc">Alquiler de pantallas LED modulares para eventos, conciertos, ferias y producciones audiovisuales. Instalación rápida, soporte técnico en directo.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">Modular</span><span class="sol-tag">Montaje rápido</span><span class="sol-tag">Soporte in-situ</span>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+          </svg>
+        </div>
+        <h3 class="sol-title">Gestión de Contenidos</h3>
+        <p class="sol-desc">Software CMS propio y plataformas de terceros para la gestión remota de contenidos, programación de campañas y monitorización en tiempo real de toda la infraestructura.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">CMS propio</span><span class="sol-tag">Nube / On-premise</span><span class="sol-tag">API abierta</span>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+        </div>
+        <h3 class="sol-title">Mantenimiento &amp; Soporte</h3>
+        <p class="sol-desc">Contratos de mantenimiento preventivo y correctivo con tiempos de respuesta garantizados. Monitorización remota 24/7 y repuesto de módulos en stock permanente.</p>
+        <div class="sol-tags">
+          <span class="sol-tag">SLA garantizado</span><span class="sol-tag">Stock inmediato</span><span class="sol-tag">Remoto 24/7</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<!-- ── CTA STRIP ── -->
-<section id="cta-strip">
-    <div class="container">
-        <div class="cta-inner">
-            <div class="reveal">
-                <h2 class="cta-title">Empieza por<br>el diagnóstico.</h2>
-                <p class="cta-sub">Analizamos tu empresa en profundidad y te entregamos un plan de acción concreto. Sin jerga. Sin rodeos.</p>
-            </div>
-            <div class="cta-right reveal reveal-delay-1">
-                <a href="#contacto" class="btn btn-white btn-lg" style="width:100%;justify-content:center">Solicitar diagnóstico</a>
-            </div>
-        </div>
+<!-- ── PROYECTOS ── -->
+<section id="proyectos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="label">Proyectos</span>
+      <h2 class="section-title">Instalaciones reales.<br>Impacto real.</h2>
     </div>
+    <div class="projects-grid">
+
+      <!-- Proyecto destacado grande -->
+      <div class="proj-card wide p1 reveal">
+        <div class="proj-thumb"><div class="proj-img"></div></div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-cat">Estadio</span>
+            <span class="proj-sep"></span>
+            <span class="proj-year">2023</span>
+          </div>
+          <h3 class="proj-title">Marcador LED Estadio Multiuso</h3>
+          <p class="proj-detail">Diseño e instalación de marcadores LED perimetrales y videomarcador central de alta resolución en estadio con capacidad para 45.000 espectadores.</p>
+          <div class="proj-specs">
+            <span class="proj-spec">P6 Outdoor</span>
+            <span class="proj-spec">1.800 m²</span>
+            <span class="proj-spec">8K Ready</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto vertical tall -->
+      <div class="proj-card tall p2 reveal reveal-delay-1">
+        <div class="proj-thumb"><div class="proj-img"></div></div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-cat">Sala de Control</span>
+            <span class="proj-sep"></span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h3 class="proj-title">Centro de Control Operativo Nacional</h3>
+          <p class="proj-detail">Sala de control de misión crítica con videowall 12×3 metros, 24 posiciones de trabajo y redundancia total.</p>
+          <div class="proj-specs">
+            <span class="proj-spec">LCD/LED</span>
+            <span class="proj-spec">Redundancia N+1</span>
+            <span class="proj-spec">24/7</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto medio -->
+      <div class="proj-card med p3 reveal reveal-delay-2">
+        <div class="proj-thumb"><div class="proj-img"></div></div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-cat">Retail</span>
+            <span class="proj-sep"></span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h3 class="proj-title">Digital Signage Centro Comercial Premium</h3>
+          <p class="proj-detail">Red de 80 pantallas LED en flagship store y zonas comunes. CMS centralizado con programación dinámica de contenidos.</p>
+          <div class="proj-specs">
+            <span class="proj-spec">80 pantallas</span>
+            <span class="proj-spec">CMS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto full width -->
+      <div class="proj-card full p4 reveal">
+        <div class="proj-thumb"><div class="proj-img"></div></div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-cat">Eventos &amp; Rental</span>
+            <span class="proj-sep"></span>
+            <span class="proj-year">2023</span>
+          </div>
+          <h3 class="proj-title">Escenario LED Festival Internacional — Stage Principal 600 m²</h3>
+          <p class="proj-detail">Diseño técnico, montaje y operación en directo de pantalla LED principal de 600 m² para festival con 80.000 asistentes. Procesado de señal de baja latencia para retransmisión en directo.</p>
+          <div class="proj-specs">
+            <span class="proj-spec">P3.9 Rental</span>
+            <span class="proj-spec">600 m²</span>
+            <span class="proj-spec">Baja latencia</span>
+            <span class="proj-spec">Live broadcast</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 5 -->
+      <div class="proj-card med p5 reveal">
+        <div class="proj-thumb"><div class="proj-img"></div></div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-cat">Corporativo</span>
+            <span class="proj-sep"></span>
+            <span class="proj-year">2024</span>
+          </div>
+          <h3 class="proj-title">Lobby LED Sede Corporativa Multinacional</h3>
+          <p class="proj-detail">LED wall curvo de 90 m² en recepción principal con gestión de contenidos generativos y sinergias con sistema BMS del edificio.</p>
+          <div class="proj-specs">
+            <span class="proj-spec">P1.8 Indoor</span>
+            <span class="proj-spec">Curvo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 6 -->
+      <div class="proj-card med p6 reveal reveal-delay-1">
+        <div class="proj-thumb"><div class="proj-img"></div></div>
+        <div class="proj-info">
+          <div class="proj-meta">
+            <span class="proj-cat">Aeropuerto</span>
+            <span class="proj-sep"></span>
+            <span class="proj-year">2022</span>
+          </div>
+          <h3 class="proj-title">Señalización Dinámica Terminal Internacional</h3>
+          <p class="proj-detail">Implantación de señalización LED dinámica en terminal de pasajeros: 320 pantallas integradas en sistema FIDS y publicidad dinámica.</p>
+          <div class="proj-specs">
+            <span class="proj-spec">320 displays</span>
+            <span class="proj-spec">FIDS integrado</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:3rem" class="reveal">
+      <a href="#contacto" class="btn btn-ghost btn-lg">Ver todos los proyectos →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── VIDEO REEL ── -->
+<section id="video-reel">
+  <div class="container">
+    <div class="video-inner">
+      <div class="video-left reveal">
+        <span class="label">Showreel</span>
+        <h2 class="section-title" style="margin-top:.75rem">Tecnología en<br>movimiento.</h2>
+        <p class="video-sub">
+          Una selección de nuestras instalaciones más destacadas. Desde pantallas LED de última generación hasta salas de control de misión crítica, todo bajo un único equipo especializado.
+        </p>
+        <div class="video-features">
+          <div class="vid-feat">
+            <div class="vid-feat-dot"></div>
+            <p class="vid-feat-text"><strong>Fabricación propia</strong> — Módulos LED diseñados y ensamblados con control de calidad al 100% en origen.</p>
+          </div>
+          <div class="vid-feat">
+            <div class="vid-feat-dot"></div>
+            <p class="vid-feat-text"><strong>Ingeniería integral</strong> — Del proyecto técnico a la puesta en marcha y mantenimiento. Un solo interlocutor.</p>
+          </div>
+          <div class="vid-feat">
+            <div class="vid-feat-dot"></div>
+            <p class="vid-feat-text"><strong>Soporte 24/7</strong> — Monitorización remota continua y respuesta técnica garantizada en menos de 4 horas.</p>
+          </div>
+        </div>
+      </div>
+      <div class="video-embed reveal reveal-delay-1">
+        <!--
+          INSTRUCCIÓN: Reemplaza el src con el ID de tu vídeo de YouTube.
+          Ejemplo: https://www.youtube.com/embed/TU_VIDEO_ID?rel=0&color=white&modestbranding=1
+        -->
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/videoseries?list=PLbpi6ZahtOH6Ar_3GPy3workHQR8yWi-B&rel=0&color=white&modestbranding=1&iv_load_policy=3"
+            title="RPG Technology — Showreel"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TECNOLOGÍA ── -->
+<section id="tecnologia">
+  <div class="container">
+    <div class="reveal">
+      <span class="label">Por qué RPG Technology</span>
+      <h2 class="section-title" style="margin-top:.75rem">Ingeniería que<br>no negocia calidad.</h2>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-item reveal">
+        <div class="tech-num">01</div>
+        <h3 class="tech-title">Fabricación &amp; Control de Calidad</h3>
+        <p class="tech-desc">Módulos LED fabricados y certificados bajo estándares internacionales. <em class="tech-highlight">Control de uniformidad cromática</em>, test de píxel individual y protocolos de envejecimiento acelerado antes de cada envío.</p>
+      </div>
+      <div class="tech-item reveal reveal-delay-1">
+        <div class="tech-num">02</div>
+        <h3 class="tech-title">Ingeniería de Proyecto</h3>
+        <p class="tech-desc">Equipo propio de ingenieros especializados en AV, electrónica y telecomunicaciones. <em class="tech-highlight">Diseño BIM</em>, simulación fotométrica y planificación de infraestructura eléctrica incluidos en cada proyecto.</p>
+      </div>
+      <div class="tech-item reveal reveal-delay-2">
+        <div class="tech-num">03</div>
+        <h3 class="tech-title">Procesado &amp; Señal</h3>
+        <p class="tech-desc">Integración con los principales procesadores del mercado (Novastar, Brompton, Barco) y desarrollo de <em class="tech-highlight">soluciones de señal a medida</em> para entornos de misión crítica con latencia &lt;1 frame.</p>
+      </div>
+      <div class="tech-item reveal reveal-delay-3">
+        <div class="tech-num">04</div>
+        <h3 class="tech-title">Mantenimiento Predictivo</h3>
+        <p class="tech-desc">Plataforma de <em class="tech-highlight">monitorización IoT en tiempo real</em>: temperatura, voltaje, tasa de fallos y luminosidad de cada módulo. Alertas automáticas y despacho de técnico antes de que el fallo sea visible.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div id="stats-strip">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-num" data-count="500" data-suffix="+">0+</div>
+        <div class="stat-label">Proyectos instalados</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="20" data-suffix="">0</div>
+        <div class="stat-label">Países de presencia</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="15" data-suffix=" años">0 años</div>
+        <div class="stat-label">De experiencia AV</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num" data-count="99.8" data-suffix="%" data-decimals="1">0%</div>
+        <div class="stat-label">Uptime garantizado</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── CTA BAND ── -->
+<section id="cta-band">
+  <div class="cta-band-bg"></div>
+  <div class="cta-band-border"></div>
+  <div class="cta-band-border-b"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="reveal">
+        <h2 class="cta-title">¿Tienes un proyecto<br><span>en mente?</span></h2>
+        <p class="cta-desc">Cuéntanos el desafío. Te respondemos en menos de 24 horas con una propuesta técnica adaptada a tu espacio, presupuesto y calendario.</p>
+      </div>
+      <div class="cta-actions reveal reveal-delay-1">
+        <a href="#contacto" class="btn btn-cyan btn-lg" style="width:100%;justify-content:center">Solicitar propuesta técnica</a>
+        <a href="tel:+34910000000" class="btn btn-outline-cyan btn-lg" style="width:100%;justify-content:center">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          Llamar ahora
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ── CONTACTO ── -->
 <section id="contacto">
-    <div class="lava-wrap"><div class="lava-lamp"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div><div class="blob b5"></div><div class="blob b6"></div></div></div>
-    <div class="container" style="position:relative;z-index:1">
-        <div class="contacto-grid">
-            <div class="reveal">
-                <div class="c-overline">
-                    <span class="label">Contacto</span>
-                    <h2 class="contact-title">Hablemos<br>de tu negocio.</h2>
-                </div>
-                <div class="c-info">
-                    <div class="c-item">
-                        <div>
-                            <p class="c-label">Email</p>
-                            <p class="c-val">infocipris@outlook.com</p>
-                        </div>
-                    </div>
-                    <div class="c-item">
-                        <div>
-                            <p class="c-label">Respuesta</p>
-                            <p class="c-val">Menos de 24 horas hábiles</p>
-                        </div>
-                    </div>
-                    <div class="c-item">
-                        <div>
-                            <p class="c-label">Operaciones</p>
-                            <p class="c-val">Madrid, España · Remoto global</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <form class="contact-form reveal reveal-delay-1" onsubmit="handleForm(event)">
-                <div class="form-row">
-                    <div class="form-grp">
-                        <label class="form-label">Nombre</label>
-                        <input type="text" class="form-input" placeholder="Tu nombre" required>
-                    </div>
-                    <div class="form-grp">
-                        <label class="form-label">Empresa</label>
-                        <input type="text" class="form-input" placeholder="Nombre de empresa">
-                    </div>
-                </div>
-                <div class="form-grp">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-input" placeholder="tu@empresa.com" required>
-                </div>
-                <div class="form-grp">
-                    <label class="form-label">¿Qué necesitas?</label>
-                    <select class="form-select form-input">
-                        <option value="" disabled selected>Selecciona</option>
-                        <option>Diagnóstico estratégico</option>
-                        <option>Identidad y branding</option>
-                        <option>Diseño y desarrollo web</option>
-                        <option>Contenido y SEO</option>
-                        <option>Performance Marketing</option>
-                        <option>CRM y ventas</option>
-                        <option>Formación in-company</option>
-                        <option>Servicio 360 completo</option>
-                        <option>No lo tengo claro aún</option>
-                    </select>
-                </div>
-                <div class="form-grp">
-                    <label class="form-label">Cuéntanos más</label>
-                    <textarea class="form-textarea" placeholder="Describe tu situación y qué quieres conseguir..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;cursor:none">
-                    Enviar mensaje
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-                <p style="font-size:.73rem;color:var(--w30);text-align:center">Respondemos siempre en menos de 24h. Sin spam.</p>
-            </form>
+  <div class="contacto-glow"></div>
+  <div class="container">
+    <div class="contacto-grid">
+      <div class="reveal">
+        <span class="label">Contacto</span>
+        <h2 class="contact-title">Hablemos<br>de tu proyecto.</h2>
+        <div class="c-info">
+          <div class="c-item">
+            <p class="c-label">Email</p>
+            <p class="c-val">info@rpg-technology.com</p>
+            <p class="c-sub">Respondemos en menos de 24h hábiles</p>
+          </div>
+          <div class="c-item">
+            <p class="c-label">Teléfono</p>
+            <p class="c-val">+34 910 000 000</p>
+            <p class="c-sub">Lunes a Viernes, 9:00 — 18:00</p>
+          </div>
+          <div class="c-item">
+            <p class="c-label">Sede</p>
+            <p class="c-val">Madrid, España</p>
+            <p class="c-sub">Cobertura nacional e internacional</p>
+          </div>
         </div>
+      </div>
+      <form class="contact-form reveal reveal-delay-1" onsubmit="handleForm(event)">
+        <div class="form-row">
+          <div class="form-grp">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-input" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-grp">
+            <label class="form-label">Empresa</label>
+            <input type="text" class="form-input" placeholder="Nombre de empresa">
+          </div>
+        </div>
+        <div class="form-grp">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="tu@empresa.com" required>
+        </div>
+        <div class="form-grp">
+          <label class="form-label">Tipo de proyecto</label>
+          <select class="form-select form-input">
+            <option value="" disabled selected>Selecciona el tipo de solución</option>
+            <option>Pantalla LED interior</option>
+            <option>Fachada / LED exterior</option>
+            <option>Sala de control</option>
+            <option>LED Rental / Eventos</option>
+            <option>Señalización digital (DOOH)</option>
+            <option>Estadio / Instalación deportiva</option>
+            <option>Mantenimiento y soporte</option>
+            <option>Otro / No lo sé aún</option>
+          </select>
+        </div>
+        <div class="form-grp">
+          <label class="form-label">Cuéntanos el proyecto</label>
+          <textarea class="form-textarea" placeholder="Dimensiones aproximadas, ubicación, plazo, presupuesto orientativo..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;cursor:none">
+          Enviar consulta
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <p style="font-size:.72rem;color:var(--w30);text-align:center">Sin compromiso. Respondemos siempre en &lt;24h.</p>
+      </form>
     </div>
+  </div>
 </section>
 
 <!-- ── FOOTER ── -->
 <footer>
-    <div class="container">
-        <div class="footer-top">
-            <div>
-                <div class="footer-logo"><img src="logo.png" alt="CIPRIS"></div>
-                <p class="footer-desc">Consultoría de marketing 360. Diagnosticamos antes de ejecutar. Un único interlocutor responsable de tus resultados.</p>
-                <div class="footer-social">
-                    <a href="#" class="soc">in</a>
-                    <a href="#" class="soc">ig</a>
-                    <a href="#" class="soc">𝕏</a>
-                </div>
-            </div>
-            <div>
-                <h4>Servicios</h4>
-                <ul class="footer-links">
-                    <li><a href="#servicios">Diagnóstico estratégico</a></li>
-                    <li><a href="#servicios">Identidad y branding</a></li>
-                    <li><a href="#servicios">Diseño web</a></li>
-                    <li><a href="#servicios">Contenido y SEO</a></li>
-                    <li><a href="#servicios">Performance marketing</a></li>
-                    <li><a href="#servicios">CRM y ventas</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Empresa</h4>
-                <ul class="footer-links">
-                    <li><a href="#manifiesto">Quiénes somos</a></li>
-                    <li><a href="#metodologia">Metodología</a></li>
-                    <li><a href="#precios">Precios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Recursos</h4>
-                <ul class="footer-links">
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Casos de éxito</a></li>
-                    <li><a href="#">Guías gratuitas</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                </ul>
-            </div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-mark">RPG</div>
+        <p style="font-size:.9rem;font-weight:700;letter-spacing:-.01em">RPG Technology</p>
+        <p class="footer-desc">Soluciones audiovisuales LED de alto rendimiento. Del diseño a la puesta en marcha, un único equipo especializado.</p>
+        <div class="footer-social">
+          <a href="#" class="soc">in</a>
+          <a href="#" class="soc">ig</a>
+          <a href="#" class="soc">yt</a>
         </div>
-        <div class="footer-bottom">
-            <p class="footer-copy">© 2025 CIPRIS · Consultoría de Marketing 360</p>
-            <div class="footer-legal">
-                <a href="#">Privacidad</a>
-                <a href="#">Aviso legal</a>
-                <a href="#">Cookies</a>
-            </div>
-        </div>
+      </div>
+      <div>
+        <h4>Soluciones</h4>
+        <ul class="footer-links">
+          <li><a href="#soluciones">LED Indoor</a></li>
+          <li><a href="#soluciones">LED Outdoor</a></li>
+          <li><a href="#soluciones">Salas de Control</a></li>
+          <li><a href="#soluciones">Rental &amp; Eventos</a></li>
+          <li><a href="#soluciones">Señalización Digital</a></li>
+          <li><a href="#soluciones">Mantenimiento</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Empresa</h4>
+        <ul class="footer-links">
+          <li><a href="#about-strip">Quiénes somos</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#tecnologia">Tecnología</a></li>
+          <li><a href="#video-reel">Showreel</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Recursos</h4>
+        <ul class="footer-links">
+          <li><a href="#">Catálogo PDF</a></li>
+          <li><a href="#">Blog técnico</a></li>
+          <li><a href="#">Fichas técnicas</a></li>
+          <li><a href="#">Casos de éxito</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 RPG Technology — Soluciones Audiovisuales</p>
+      <div class="footer-legal">
+        <a href="#">Privacidad</a>
+        <a href="#">Aviso legal</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
-/* ═══════════════════════════════════════
-   CUSTOM CURSOR
-═══════════════════════════════════════ */
+/* ══════════════════════════════════════
+   CURSOR
+══════════════════════════════════════ */
 const cursor = document.getElementById('cursor');
-
-document.addEventListener('mousemove', e=>{
-    cursor.style.left = (e.clientX - 1) + 'px';
-    cursor.style.top  = (e.clientY - 1) + 'px';
+document.addEventListener('mousemove', e => {
+  cursor.style.left = (e.clientX - 1) + 'px';
+  cursor.style.top  = (e.clientY - 1) + 'px';
+});
+document.querySelectorAll('a,button,.sol-card,.proj-card,.tech-item,.about-stat').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
 });
 
-document.querySelectorAll('a,button,.servicio-item,.step-item,.precio-card').forEach(el=>{
-    el.addEventListener('mouseenter',()=>cursor.classList.add('hover'));
-    el.addEventListener('mouseleave',()=>cursor.classList.remove('hover'));
-});
-
-/* ═══════════════════════════════════════
-   PARTICLE SYSTEM
-═══════════════════════════════════════ */
+/* ══════════════════════════════════════
+   PARTICLES — blue/cyan palette
+══════════════════════════════════════ */
 (function(){
-    const canvas = document.getElementById('particles-canvas');
-    const ctx = canvas.getContext('2d');
-    let W,H,particles=[],mouse={x:-9999,y:-9999},lastMove=0,time=0;
-    const COUNT=110, CONNECT_DIST=150, MOUSE_DIST=130, MAX_SPD=2, RETURN_DELAY=2000;
+  const canvas = document.getElementById('particles-canvas');
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], mouse = {x:-9999,y:-9999}, lastMove = 0, time = 0;
+  const COUNT = 90, CONNECT_DIST = 140, MOUSE_DIST = 120, MAX_SPD = 1.8, RETURN_DELAY = 2200;
 
-    function resize(){ W=canvas.width=canvas.offsetWidth; H=canvas.height=canvas.offsetHeight; }
-    window.addEventListener('resize',resize); resize();
-    document.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;lastMove=Date.now();});
+  function resize(){ W = canvas.width = canvas.offsetWidth; H = canvas.height = canvas.offsetHeight; }
+  window.addEventListener('resize', resize); resize();
+  document.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; lastMove = Date.now(); });
 
-    class Particle{
-        constructor(){
-            this.ox=Math.random()*W; this.oy=Math.random()*H;
-            this.x=this.ox; this.y=this.oy;
-            this.vx=(Math.random()-.5)*.25; this.vy=(Math.random()-.5)*.25;
-            this.arm=Math.random()*3+3;
-            this.alpha=Math.random()*.35+.3;
-        }
-        update(){
-            const dx=this.x-mouse.x, dy=this.y-mouse.y;
-            const d=Math.sqrt(dx*dx+dy*dy);
-            if(d<MOUSE_DIST && d>0){
-                const f=(MOUSE_DIST-d)/MOUSE_DIST;
-                this.vx+=dx/d*f*.7; this.vy+=dy/d*f*.7;
-            }
-            const spd=Math.sqrt(this.vx*this.vx+this.vy*this.vy);
-            if(spd>MAX_SPD){this.vx=this.vx/spd*MAX_SPD;this.vy=this.vy/spd*MAX_SPD;}
-            this.vx*=.993; this.vy*=.993;
-            const spd2=Math.sqrt(this.vx*this.vx+this.vy*this.vy);
-            if(Date.now()-lastMove>RETURN_DELAY){
-                this.vx+=(this.ox-this.x)*.0015;
-                this.vy+=(this.oy-this.y)*.0015;
-            } else if(spd2<0.1){
-                this.vx+=(Math.random()-.5)*.02;this.vy+=(Math.random()-.5)*.02;
-            }
-            this.x+=this.vx; this.y+=this.vy;
-            if(this.x<this.arm){this.x=this.arm;this.vx=Math.abs(this.vx);}
-            if(this.x>W-this.arm){this.x=W-this.arm;this.vx=-Math.abs(this.vx);}
-            if(this.y<this.arm){this.y=this.arm;this.vy=Math.abs(this.vy);}
-            if(this.y>H-this.arm){this.y=H-this.arm;this.vy=-Math.abs(this.vy);}
-        }
-        draw(){
-            ctx.save();
-            ctx.globalAlpha=this.alpha;
-            ctx.strokeStyle='#fff';
-            ctx.lineWidth=1.3;
-            ctx.lineCap='round';
-            ctx.beginPath();
-            ctx.moveTo(this.x-this.arm,this.y); ctx.lineTo(this.x+this.arm,this.y);
-            ctx.moveTo(this.x,this.y-this.arm); ctx.lineTo(this.x,this.y+this.arm);
-            ctx.stroke();
-            ctx.restore();
-        }
+  class Particle {
+    constructor(){
+      this.ox = Math.random() * W; this.oy = Math.random() * H;
+      this.x = this.ox; this.y = this.oy;
+      this.vx = (Math.random() - .5) * .22; this.vy = (Math.random() - .5) * .22;
+      this.arm = Math.random() * 3 + 2.5;
+      this.alpha = Math.random() * .3 + .25;
     }
-
-    for(let i=0;i<COUNT;i++) particles.push(new Particle());
-
-    function draw(){
-        ctx.clearRect(0,0,W,H);
-        time+=0.018;
-        for(let i=0;i<particles.length;i++){
-            for(let j=i+1;j<particles.length;j++){
-                const dx=particles[i].x-particles[j].x;
-                const dy=particles[i].y-particles[j].y;
-                const d=Math.sqrt(dx*dx+dy*dy);
-                if(d<CONNECT_DIST){
-                    const pulse=(Math.sin(time*1.8+i*0.6+j*0.4)+1)/2;
-                    const base=(1-d/CONNECT_DIST)*.9;
-                    const alpha=base*(0.35+0.65*pulse);
-                    const grad=ctx.createLinearGradient(particles[i].x,particles[i].y,particles[j].x,particles[j].y);
-                    grad.addColorStop(0,`rgba(229,0,11,${alpha})`);
-                    grad.addColorStop(0.5,`rgba(255,60,60,${alpha*1.3})`);
-                    grad.addColorStop(1,`rgba(229,0,11,${alpha})`);
-                    ctx.beginPath();
-                    ctx.moveTo(particles[i].x,particles[i].y);
-                    ctx.lineTo(particles[j].x,particles[j].y);
-                    ctx.strokeStyle=grad;
-                    ctx.lineWidth=1;
-                    ctx.stroke();
-                }
-            }
-        }
-        for(const p of particles){p.update();p.draw();}
-        requestAnimationFrame(draw);
+    update(){
+      const dx = this.x - mouse.x, dy = this.y - mouse.y;
+      const d = Math.sqrt(dx*dx + dy*dy);
+      if(d < MOUSE_DIST && d > 0){
+        const f = (MOUSE_DIST - d) / MOUSE_DIST;
+        this.vx += dx/d*f*.6; this.vy += dy/d*f*.6;
+      }
+      const spd = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+      if(spd > MAX_SPD){ this.vx = this.vx/spd*MAX_SPD; this.vy = this.vy/spd*MAX_SPD; }
+      this.vx *= .993; this.vy *= .993;
+      const spd2 = Math.sqrt(this.vx*this.vx + this.vy*this.vy);
+      if(Date.now() - lastMove > RETURN_DELAY){
+        this.vx += (this.ox - this.x) * .0015; this.vy += (this.oy - this.y) * .0015;
+      } else if(spd2 < .1){
+        this.vx += (Math.random() - .5) * .02; this.vy += (Math.random() - .5) * .02;
+      }
+      this.x += this.vx; this.y += this.vy;
+      if(this.x < this.arm){this.x = this.arm; this.vx = Math.abs(this.vx);}
+      if(this.x > W - this.arm){this.x = W - this.arm; this.vx = -Math.abs(this.vx);}
+      if(this.y < this.arm){this.y = this.arm; this.vy = Math.abs(this.vy);}
+      if(this.y > H - this.arm){this.y = H - this.arm; this.vy = -Math.abs(this.vy);}
     }
-    draw();
+    draw(){
+      ctx.save();
+      ctx.globalAlpha = this.alpha;
+      ctx.strokeStyle = 'rgba(0,200,240,0.8)';
+      ctx.lineWidth = 1.2;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(this.x - this.arm, this.y); ctx.lineTo(this.x + this.arm, this.y);
+      ctx.moveTo(this.x, this.y - this.arm); ctx.lineTo(this.x, this.y + this.arm);
+      ctx.stroke();
+      ctx.restore();
+    }
+  }
+
+  for(let i = 0; i < COUNT; i++) particles.push(new Particle());
+
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+    time += .016;
+    for(let i = 0; i < particles.length; i++){
+      for(let j = i + 1; j < particles.length; j++){
+        const dx = particles[i].x - particles[j].x;
+        const dy = particles[i].y - particles[j].y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if(d < CONNECT_DIST){
+          const pulse = (Math.sin(time * 1.6 + i * .5 + j * .35) + 1) / 2;
+          const base = (1 - d / CONNECT_DIST) * .8;
+          const alpha = base * (.3 + .7 * pulse);
+          const g = ctx.createLinearGradient(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+          g.addColorStop(0, `rgba(26,92,255,${alpha})`);
+          g.addColorStop(.5, `rgba(0,200,240,${alpha*1.2})`);
+          g.addColorStop(1, `rgba(26,92,255,${alpha})`);
+          ctx.beginPath();
+          ctx.moveTo(particles[i].x, particles[i].y);
+          ctx.lineTo(particles[j].x, particles[j].y);
+          ctx.strokeStyle = g;
+          ctx.lineWidth = .9;
+          ctx.stroke();
+        }
+      }
+    }
+    for(const p of particles){ p.update(); p.draw(); }
+    requestAnimationFrame(draw);
+  }
+  draw();
 })();
 
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════════
    NAV SCROLL
-═══════════════════════════════════════ */
-const navbar=document.getElementById('navbar');
-window.addEventListener('scroll',()=>{
-    navbar.classList.toggle('scrolled',window.scrollY>60);
+══════════════════════════════════════ */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════════
    REVEAL ON SCROLL
-═══════════════════════════════════════ */
-const reveals=document.querySelectorAll('.reveal');
-const revealObs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-        if(e.isIntersecting){e.target.classList.add('visible');revealObs.unobserve(e.target)}
-    });
-},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-reveals.forEach(el=>revealObs.observe(el));
+══════════════════════════════════════ */
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); revealObs.unobserve(e.target); }
+  });
+}, {threshold:.1, rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════════
    MAGNETIC BUTTONS
-═══════════════════════════════════════ */
-document.querySelectorAll('.btn').forEach(btn=>{
-    btn.addEventListener('mousemove',e=>{
-        const r=btn.getBoundingClientRect();
-        const x=e.clientX-r.left-r.width/2;
-        const y=e.clientY-r.top-r.height/2;
-        btn.style.transform=`translate(${x*.18}px,${y*.18}px) translateY(-2px)`;
-    });
-    btn.addEventListener('mouseleave',()=>{
-        btn.style.transform='';
-    });
+══════════════════════════════════════ */
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width/2;
+    const y = e.clientY - r.top - r.height/2;
+    btn.style.transform = `translate(${x*.16}px,${y*.16}px) translateY(-2px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
 });
 
-/* ═══════════════════════════════════════
+/* ══════════════════════════════════════
    SMOOTH SCROLL
-═══════════════════════════════════════ */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-        const href=a.getAttribute('href');
-        if(href==='#')return;
-        e.preventDefault();
-        const t=document.querySelector(href);
-        if(t) t.scrollIntoView({behavior:'smooth'});
-    });
+══════════════════════════════════════ */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const href = a.getAttribute('href');
+    if(href === '#') return;
+    e.preventDefault();
+    const t = document.querySelector(href);
+    if(t) t.scrollIntoView({behavior:'smooth'});
+  });
 });
 
-/* ═══════════════════════════════════════
-   FORM
-═══════════════════════════════════════ */
-function handleForm(e){
-    e.preventDefault();
-    const btn=e.target.querySelector('button');
-    btn.innerHTML='Mensaje enviado — te contactamos en &lt;24h';
-    btn.style.background='#16a34a';
-    btn.style.borderColor='#16a34a';
-    btn.disabled=true;
-}
+/* ══════════════════════════════════════
+   STATS COUNT-UP
+══════════════════════════════════════ */
+function easeOut(t){ return 1 - Math.pow(1-t, 3); }
 
-/* ═══════════════════════════════════════
-   STAT COUNT-UP
-═══════════════════════════════════════ */
-const statObs=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-        if(!e.isIntersecting)return;
-        e.target.querySelectorAll('.stat-num').forEach((el,idx)=>{
-            setTimeout(()=>{
-                el.classList.add('lit');
-                const end=+el.dataset.count,suffix=el.dataset.suffix||'';
-                let t0=null,dur=1600;
-                function step(ts){
-                    if(!t0)t0=ts;
-                    const p=Math.min((ts-t0)/dur,1);
-                    el.textContent=Math.floor(easeOut(p)*end)+suffix;
-                    if(p<1)requestAnimationFrame(step);
-                    else el.textContent=end+suffix;
-                }
-                requestAnimationFrame(step);
-                setTimeout(()=>{el.classList.remove('lit');el.classList.add('pulsing');},2200);
-            },idx*180);
-        });
-        statObs.unobserve(e.target);
-    });
-},{threshold:.4});
-const statsStrip=document.getElementById('stats-strip');
-if(statsStrip)statObs.observe(statsStrip);
-
-/* ── METHOD LINE ── */
-const lineEl=document.getElementById('method-line');
-if(lineEl){
-    new IntersectionObserver(entries=>{
-        if(entries[0].isIntersecting){lineEl.classList.add('active');}
-    },{threshold:.3}).observe(lineEl);
-}
-
-function countUp(el,end,suffix='',decimals=0){
-    let start=0,dur=1400,startTime=null;
-    function step(ts){
-        if(!startTime)startTime=ts;
-        const p=Math.min((ts-startTime)/dur,1);
-        const val=p<1?start+(end-start)*easeOut(p):end;
-        el.textContent=(decimals?val.toFixed(decimals):Math.floor(val))+suffix;
-        if(p<1)requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-}
-function easeOut(t){return 1-Math.pow(1-t,3)}
-
-/* ── TYPEWRITER MANIFIESTO ── */
-(function(){
-    const el=document.getElementById('familiar-text');
-    const cur=document.getElementById('familiar-cursor');
-    if(!el||!cur)return;
-    const lines=['¿TE SUENA','FAMILIAR?'];
-    let started=false;
-    new IntersectionObserver(entries=>{
-        if(!entries[0].isIntersecting||started)return;
-        started=true;
-        let done=[];
-        let li=0,ci=0;
-        function type(){
-            if(li>=lines.length){
-                cur.classList.add('hide');
-                el.classList.add('typed');
-                return;
-            }
-            if(ci<=lines[li].length){
-                const current=lines[li].substring(0,ci);
-                el.innerHTML=[...done,current].join('<br>');
-                ci++;
-                setTimeout(type,90);
-            } else {
-                done.push(lines[li]);
-                li++;ci=0;
-                setTimeout(type,300);
-            }
+const statObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    e.target.querySelectorAll('.stat-num').forEach((el, idx) => {
+      setTimeout(() => {
+        el.classList.add('visible');
+        const end = parseFloat(el.dataset.count);
+        const suffix = el.dataset.suffix || '';
+        const decimals = parseInt(el.dataset.decimals || '0');
+        let t0 = null, dur = 1600;
+        function step(ts){
+          if(!t0) t0 = ts;
+          const p = Math.min((ts - t0) / dur, 1);
+          const val = easeOut(p) * end;
+          el.textContent = (decimals ? val.toFixed(decimals) : Math.floor(val)) + suffix;
+          if(p < 1) requestAnimationFrame(step);
+          else el.textContent = (decimals ? end.toFixed(decimals) : end) + suffix;
         }
-        setTimeout(type,500);
-    },{threshold:.5}).observe(el);
-})();
+        requestAnimationFrame(step);
+      }, idx * 160);
+    });
+    statObs.unobserve(e.target);
+  });
+}, {threshold:.4});
+const statsStrip = document.getElementById('stats-strip');
+if(statsStrip) statObs.observe(statsStrip);
+
+/* ══════════════════════════════════════
+   FORM SUBMIT
+══════════════════════════════════════ */
+function handleForm(e){
+  e.preventDefault();
+  const btn = e.target.querySelector('button');
+  btn.innerHTML = 'Consulta enviada — te contactamos en &lt;24h ✓';
+  btn.style.background = '#0f7a3a';
+  btn.style.borderColor = '#0f7a3a';
+  btn.style.boxShadow = '0 0 20px rgba(15,122,58,.5)';
+  btn.disabled = true;
+}
 </script>
 </body>
 </html>
